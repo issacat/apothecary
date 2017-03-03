@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/sandbox.unity
+- path: Assets/prototype2.unity
   isLoaded: 1
   isActive: 1
