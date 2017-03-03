@@ -37,7 +37,7 @@ public class WorldScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        menuState = MenuState.mainMenu;
+        menuState = MenuState.storyMode;
 	}
 	
 	// Update is called once per frame

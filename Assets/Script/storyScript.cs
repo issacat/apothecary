@@ -36,16 +36,6 @@ public class storyScript : MonoBehaviour {
             Debug.Log("we are in the store");
 
             _storeMode.SetActive(true);
-            _requestMode.SetActive(false);
-            _preparationMode.SetActive(false);
-        }
-
-        if (screen == PresentScreen.requestMode)
-        {
-            Debug.Log("we are on the request board");
-
-            _storeMode.SetActive(false);
-            _requestMode.SetActive(true);
             _preparationMode.SetActive(false);
         }
 
@@ -54,7 +44,6 @@ public class storyScript : MonoBehaviour {
             Debug.Log("we are in preparations");
 
             _storeMode.SetActive(false);
-            _requestMode.SetActive(false);
             _preparationMode.SetActive(true);
         }
     }
@@ -80,13 +69,9 @@ public class storyScript : MonoBehaviour {
     {
         if (screen == PresentScreen.storeMode)
         {
-            screen = PresentScreen.requestMode;
-        }
-
-        else if (screen == PresentScreen.requestMode)
-        {
             screen = PresentScreen.preparationMode;
         }
+
 
         else if (screen == PresentScreen.preparationMode)
         {
@@ -101,14 +86,10 @@ public class storyScript : MonoBehaviour {
             screen = PresentScreen.preparationMode;
         }
 
-        else if (screen == PresentScreen.requestMode)
-        {
-            screen = PresentScreen.storeMode;
-        }
 
         else if (screen == PresentScreen.preparationMode)
         {
-            screen = PresentScreen.requestMode;
+            screen = PresentScreen.storeMode;
         }
     }
 }
