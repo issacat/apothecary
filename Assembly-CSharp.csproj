@@ -46,24 +46,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Ingredients\ingredientScript.cs" />
      <Compile Include="Assets\Script\Board.cs" />
      <Compile Include="Assets\Script\CardScript.cs" />
      <Compile Include="Assets\Script\DragHandler.cs" />
+     <Compile Include="Assets\Script\HoverScript.cs" />
      <Compile Include="Assets\Script\Slot.cs" />
      <Compile Include="Assets\Script\UIDialog.cs" />
      <Compile Include="Assets\Script\WorldScript.cs" />
      <Compile Include="Assets\Script\bookScript.cs" />
-     <Compile Include="Assets\Script\customerDialog.cs" />
+     <Compile Include="Assets\Script\customerScript.cs" />
+     <Compile Include="Assets\Script\ingredientScript.cs" />
      <Compile Include="Assets\Script\playerScript.cs" />
-     <Compile Include="Assets\Script\preparationScript.cs" />
      <Compile Include="Assets\Script\storyScript.cs" />
      <None Include="Assets\Standard Assets\Prototyping\Shaders\WorldCoordDiffuse.shader" />
      <None Include="Assets\Standard Assets\Fonts\OpenSans\License!.txt" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
- <Reference Include="UnityEngine.Advertisements">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
- </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
@@ -78,9 +75,6 @@
  </Reference>
  <Reference Include="UnityEngine.HoloLens">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Purchasing">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityPurchasing/UnityEngine.Purchasing.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.VR">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>

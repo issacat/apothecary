@@ -16,12 +16,11 @@ TagManager:
   - storyMode
   - storeFront
   - prepArea
-  - startPrep
-  - medicineChoice
-  - creationMode
   - productDetails
   - mixingInventory
   - playerInventory
+  - ingredient
+  - requestSlot
   layers:
   - Default
   - TransparentFX

@@ -5,7 +5,6 @@ using UnityEngine;
 public enum PresentScreen
 {
     storeMode,
-    requestMode,
     preparationMode
 }
 
@@ -14,13 +13,11 @@ public class storyScript : MonoBehaviour {
     public static PresentScreen screen;
 
     public GameObject _storeMode;
-    public GameObject _requestMode;
     public GameObject _preparationMode;
 
     void Awake()
     {
         _storeMode = GameObject.FindGameObjectWithTag("storeFront");
-        _requestMode = GameObject.FindGameObjectWithTag("requestBoard");
         _preparationMode = GameObject.FindGameObjectWithTag("prepArea");
     }
 
@@ -33,7 +30,7 @@ public class storyScript : MonoBehaviour {
 	void Update () {
         if (screen == PresentScreen.storeMode)
         {
-            Debug.Log("we are in the store");
+           // Debug.Log("we are in the store");
 
             _storeMode.SetActive(true);
             _preparationMode.SetActive(false);
@@ -41,7 +38,7 @@ public class storyScript : MonoBehaviour {
 
         if (screen == PresentScreen.preparationMode)
         {
-            Debug.Log("we are in preparations");
+           // Debug.Log("we are in preparations");
 
             _storeMode.SetActive(false);
             _preparationMode.SetActive(true);
@@ -51,12 +48,6 @@ public class storyScript : MonoBehaviour {
     public void switchStore()
     {
         screen = PresentScreen.storeMode;
-    }
-
-    public void switchRequest()
-    {
-        screen = PresentScreen.requestMode;
-
     }
 
     public void switchPrepare()
