@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{93FDA6B2-70C3-C7E3-00B8-3BA81DB5C15A}</ProjectGuid>
+    <ProjectGuid>{BCF5863B-7A6E-0C9A-919F-DBEF6B4333F5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -50,6 +50,7 @@
      <Compile Include="Assets\Script\Board.cs" />
      <Compile Include="Assets\Script\CardScript.cs" />
      <Compile Include="Assets\Script\DragHandler.cs" />
+     <Compile Include="Assets\Script\HoverScript.cs" />
      <Compile Include="Assets\Script\Slot.cs" />
      <Compile Include="Assets\Script\UIDialog.cs" />
      <Compile Include="Assets\Script\WorldScript.cs" />
@@ -82,7 +83,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{7E8191F4-349B-F156-2951-2A6803C2945B}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+      <Project>{E2F4BD59-5C51-8E67-5574-D0E49F6941F1}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

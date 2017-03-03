@@ -1,0 +1,35 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{DAECDD08-40A9-01E6-3FD2-22701942CDDE}") = "apothecary_git", "Assembly-CSharp-firstpass.csproj", "{E2F4BD59-5C51-8E67-5574-D0E49F6941F1}"
+EndProject
+Project("{DAECDD08-40A9-01E6-3FD2-22701942CDDE}") = "apothecary_git", "Assembly-CSharp.csproj", "{BCF5863B-7A6E-0C9A-919F-DBEF6B4333F5}"
+EndProject
+Project("{DAECDD08-40A9-01E6-3FD2-22701942CDDE}") = "apothecary_git", "Assembly-CSharp-Editor-firstpass.csproj", "{9C62BA1D-6BAB-A774-75CE-22902D8C97BC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E2F4BD59-5C51-8E67-5574-D0E49F6941F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2F4BD59-5C51-8E67-5574-D0E49F6941F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2F4BD59-5C51-8E67-5574-D0E49F6941F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2F4BD59-5C51-8E67-5574-D0E49F6941F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCF5863B-7A6E-0C9A-919F-DBEF6B4333F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCF5863B-7A6E-0C9A-919F-DBEF6B4333F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCF5863B-7A6E-0C9A-919F-DBEF6B4333F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCF5863B-7A6E-0C9A-919F-DBEF6B4333F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C62BA1D-6BAB-A774-75CE-22902D8C97BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C62BA1D-6BAB-A774-75CE-22902D8C97BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C62BA1D-6BAB-A774-75CE-22902D8C97BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C62BA1D-6BAB-A774-75CE-22902D8C97BC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
