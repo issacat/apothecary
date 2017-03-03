@@ -1,0 +1,16 @@
+syntax: glob
+.DS_Store
+*.sln
+*.userprefs
+*.csproj
+*.pidb
+*.unitypackage
+
+Beep\.gitignore
+syntax:regexp
+^Build/.*
+^Library/.*
+^Temp/.*
+
+# Unity3D Generated File On Crash Reports
+sysinfo.txt
