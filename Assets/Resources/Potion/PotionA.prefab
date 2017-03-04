@@ -23,6 +23,8 @@ GameObject:
   - component: {fileID: 114654555669859540}
   - component: {fileID: 225999507625701780}
   - component: {fileID: 114455228927778602}
+  - component: {fileID: 61807680295645984}
+  - component: {fileID: 114236938424024234}
   m_Layer: 5
   m_Name: PotionA
   m_TagString: Untagged
@@ -30,6 +32,37 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!61 &61807680295645984
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1577656359836994}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 40, y: 40}
+--- !u!114 &114236938424024234
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1577656359836994}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ecf121722dff7d4d929b1f3999c21f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorSize: 32
+  defaultTexture: {fileID: 2800000, guid: 6366254a50f1684439cf6045e9504b74, type: 3}
+  hoverItemTexture: {fileID: 2800000, guid: f7e4b7bba8df89c4fb9ab7bc0c5b42c6, type: 3}
+  curMode: 0
+  autoCenterHotSpot: 1
+  hotSpotCustom: {x: 10, y: 5}
 --- !u!114 &114455228927778602
 MonoBehaviour:
   m_ObjectHideFlags: 1

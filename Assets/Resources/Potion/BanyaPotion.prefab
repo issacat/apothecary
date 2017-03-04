@@ -23,6 +23,8 @@ GameObject:
   - component: {fileID: 114426872148815562}
   - component: {fileID: 225052865357474748}
   - component: {fileID: 114219425031523064}
+  - component: {fileID: 61911836211947018}
+  - component: {fileID: 114097886969567728}
   m_Layer: 5
   m_Name: BanyaPotion
   m_TagString: Untagged
@@ -30,6 +32,37 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!61 &61911836211947018
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1255817194698104}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 40, y: 40}
+--- !u!114 &114097886969567728
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1255817194698104}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ecf121722dff7d4d929b1f3999c21f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorSize: 32
+  defaultTexture: {fileID: 2800000, guid: 6366254a50f1684439cf6045e9504b74, type: 3}
+  hoverItemTexture: {fileID: 2800000, guid: f7e4b7bba8df89c4fb9ab7bc0c5b42c6, type: 3}
+  curMode: 0
+  autoCenterHotSpot: 1
+  hotSpotCustom: {x: 10, y: 5}
 --- !u!114 &114219425031523064
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -810,7 +810,7 @@ Transform:
   m_GameObject: {fileID: 165687065}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -291, y: -102, z: 0}
-  m_LocalScale: {x: 27.610542, y: 27.58695, z: 52.957523}
+  m_LocalScale: {x: 30, y: 30, z: 52.957523}
   m_Children: []
   m_Father: {fileID: 1164555728}
   m_RootOrder: 0
@@ -5108,7 +5108,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 32, y: 32}
+  m_Size: {x: 40, y: 40}
 --- !u!114 &780717278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6533,6 +6533,7 @@ GameObject:
   m_Component:
   - component: {fileID: 996914104}
   - component: {fileID: 996914103}
+  - component: {fileID: 996914105}
   m_Layer: 0
   m_Name: Scripts
   m_TagString: Untagged
@@ -6569,6 +6570,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &996914105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 996914102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ecf121722dff7d4d929b1f3999c21f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorSize: 32
+  defaultTexture: {fileID: 2800000, guid: 6366254a50f1684439cf6045e9504b74, type: 3}
+  hoverItemTexture: {fileID: 2800000, guid: f7e4b7bba8df89c4fb9ab7bc0c5b42c6, type: 3}
+  curMode: 1
+  autoCenterHotSpot: 1
+  hotSpotCustom: {x: 10, y: 5}
 --- !u!224 &1005481687
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9408,6 +9426,21 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 114145109509305022, guid: ca5ea02098fd2c34782cd701b1dc315e,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114145109509305022, guid: ca5ea02098fd2c34782cd701b1dc315e,
+        type: 2}
+      propertyPath: hotSpotCustom.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114145109509305022, guid: ca5ea02098fd2c34782cd701b1dc315e,
+        type: 2}
+      propertyPath: hotSpotCustom.y
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ca5ea02098fd2c34782cd701b1dc315e, type: 2}
   m_IsPrefabParent: 0
@@ -9803,7 +9836,7 @@ Transform:
   m_GameObject: {fileID: 1492013302}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 125, y: 90, z: 0}
-  m_LocalScale: {x: 28.549002, y: 31.859678, z: 14.194755}
+  m_LocalScale: {x: 30, y: 30, z: 14.194755}
   m_Children: []
   m_Father: {fileID: 1584544315}
   m_RootOrder: 1
@@ -11557,6 +11590,28 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1716760255}
+--- !u!1 &1728197240 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1376786375841644, guid: 675df5c0261c4d449b3ab4069fbb9711,
+    type: 2}
+  m_PrefabInternal: {fileID: 1054411836}
+--- !u!114 &1728197241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1728197240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ecf121722dff7d4d929b1f3999c21f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorSize: 32
+  defaultTexture: {fileID: 2800000, guid: 6366254a50f1684439cf6045e9504b74, type: 3}
+  hoverItemTexture: {fileID: 2800000, guid: f7e4b7bba8df89c4fb9ab7bc0c5b42c6, type: 3}
+  curMode: 0
+  autoCenterHotSpot: 1
+  hotSpotCustom: {x: 10, y: 5}
 --- !u!1 &1738687186
 GameObject:
   m_ObjectHideFlags: 0
