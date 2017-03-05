@@ -47,7 +47,6 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Script\Board.cs" />
-     <Compile Include="Assets\Script\CardScript.cs" />
      <Compile Include="Assets\Script\DragHandler.cs" />
      <Compile Include="Assets\Script\HoverScript.cs" />
      <Compile Include="Assets\Script\Slot.cs" />

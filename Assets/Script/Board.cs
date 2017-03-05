@@ -5,7 +5,6 @@ using UnityEngine;
 public class Board : MonoBehaviour {
 	//private List<GameObject> requests;
 	public GameObject requestPrefab;
-	private CardScript cardscript;
 	public Transform pos1;
 	public int grea;
 

@@ -39,11 +39,11 @@ public class HoverScript : MonoBehaviour {
 
     void OnMouseEnter()
     {
-        Debug.Log("random");
+        //Debug.Log("random");
         if (gameObject.tag == "ingredient")
         {
             Cursor.SetCursor(hoverItemTexture, hotSpotCustom, CursorMode.ForceSoftware);
-            Debug.Log("hovering over an ingredient!");
+           // Debug.Log("hovering over an ingredient!");
         }
     }
 
