@@ -11,6 +11,12 @@ public class bookScript : MonoBehaviour {
     public GameObject _tomePage;
     public GameObject _recipePage;
 
+    //page array
+    public GameObject[] ingredientPages;
+
+    //what pages you are on
+    public int pageNum = 0;
+
     // Use this for initialization
     void Start () {
         im.GetComponent<CanvasRenderer>().SetAlpha(250f);
@@ -29,10 +35,26 @@ public class bookScript : MonoBehaviour {
 		
 	}
 
-    void flipPage()
+    public void flipPage()
     {
-
+        if (pageNum < 3)
+        {
+            _ingredientPage.transform.GetChild(pageNum).gameObject.SetActive(false);
+            pageNum++;
+            _ingredientPage.transform.GetChild(pageNum).gameObject.SetActive(true);
+        }
     }
+
+    public void backPage()
+    {
+        if (pageNum > 0)
+        {
+            _ingredientPage.transform.GetChild(pageNum).gameObject.SetActive(false);
+            pageNum--;
+            _ingredientPage.transform.GetChild(pageNum).gameObject.SetActive(true);
+        }
+    }
+
 
     public void ingredientSwitch()
     {

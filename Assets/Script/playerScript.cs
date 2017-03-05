@@ -31,7 +31,7 @@ public class playerScript : MonoBehaviour {
 	void Update () {
 		
 	}
-    
+
     public void toggleInventory()
     {
         if (invState == 1)
