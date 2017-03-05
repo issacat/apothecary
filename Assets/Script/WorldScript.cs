@@ -19,6 +19,7 @@ public class WorldScript : MonoBehaviour {
     public GameObject _storyMode;
 
     public playerScript player;
+    public customerScript customer;
 
 
     void Awake()
@@ -77,5 +78,17 @@ public class WorldScript : MonoBehaviour {
             menuState = MenuState.storyMode;
         }
         
+    }
+
+    public void endDay()
+    {
+        menuState = MenuState.merchantMode;
+        player.day++;
+        if(customer.charaState == 2)
+        {
+            customer.charaState++;
+            player.money += 50;
+            player.reputation += 10;
+        }
     }
 }

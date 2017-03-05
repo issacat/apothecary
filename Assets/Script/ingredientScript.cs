@@ -63,11 +63,6 @@ public class ingredientScript : MonoBehaviour {
             }
         }
 
-        Debug.Log(banyaT);
-        Debug.Log(hollyT);
-        Debug.Log(sootheT);
-        Debug.Log(strengthT);
-
         if (banyaT == false && hollyT == false && strengthT == true && sootheT == true)
         {
             addPotion(1);

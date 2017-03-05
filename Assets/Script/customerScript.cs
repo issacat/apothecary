@@ -72,7 +72,11 @@ public class customerScript : MonoBehaviour
                 dialogString = "<b>Muuya:</b> Actually, if it’s not too much to ask, maybe also something to muster my strength. It seems I may go help her tomorrow as well.";
             }
         }
-        else if (charaState == 2) // Muuya request 2
+        else if (charaState == 2)
+        {
+            dialogString = "<b>Muuya:</b> Thank you. I don’t have much as payment, but I found some beautiful holly berries on my way back, the most beautiful I’ve ever seen!";
+        }
+        else if (charaState == 3) // Muuya request 2
         {
             if (dialogState == 0)
             {
@@ -117,14 +121,11 @@ public class customerScript : MonoBehaviour
     {
         if (requestSlot.transform.childCount != 0)
         {
-            Debug.Log(requestSlot.transform.GetChild(0).gameObject.name);
-            Debug.Log(request.name);
             if (requestSlot.transform.GetChild(0).gameObject.name.Contains(request.name))
             {
                 Destroy(requestSlot.transform.GetChild(0).gameObject);
                 charaState++;
                 dialogState = 0; // reset dialogue to start from beginning
-                setChara(charaState);
             }
         }
     }
@@ -140,7 +141,7 @@ public class customerScript : MonoBehaviour
             }
             if (dialogState >= muu1MaxDS) dialogState = 0;
         }
-        if (charaState == 2)
+        if (charaState == 3)
         {
             if (dialogState < muu2MaxDS)
             {
@@ -150,15 +151,15 @@ public class customerScript : MonoBehaviour
         }
     }
 
-    public void setChara(int s)
+    public void setChara()
     {
-        if (s == 1)
+        if (charaState == 1)
         {
             request = potionA;
             sprite.GetComponent<SpriteRenderer>().sprite = chara1;
 
         }
-        else if (s == 2)
+        else if (charaState == 3)
         {
             request = potionB;
             sprite.GetComponent<SpriteRenderer>().sprite = chara2;

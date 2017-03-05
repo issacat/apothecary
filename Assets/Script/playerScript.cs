@@ -7,43 +7,27 @@ public class playerScript : MonoBehaviour {
     //resources the player has
     public int money = 500;
     public int reputation = 50;
+    public int day = 1;
 
-    //controls if inventory and book are visible
-    public int invState = 1;
+    //controls and book are visible
     public int bookState = 0;
-    public GameObject inventory;
     public GameObject book;
 
     //text for UI
     public Text moneyText;
     public Text repText;
+    public Text dayText;
 
     // Use this for initialization
     void Start () {
-        inventory.SetActive(true);
         book.SetActive(false);
-
-        moneyText.text = "Money: " + money.ToString();
-        repText.text = "Rep: " + reputation.ToString() + "/100";
     }
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
-
-    public void toggleInventory()
-    {
-        if (invState == 1)
-        {
-            invState = 0;
-            inventory.SetActive(false);
-        }
-        else if (invState == 0)
-        {
-            invState = 1;
-            inventory.SetActive(true);            
-        }
+        moneyText.text = "Money: " + money.ToString();
+        repText.text = "Rep: " + reputation.ToString() + "/100";
+        dayText.text = "Day: " + day.ToString();
     }
 
     public void toggleBook()
@@ -58,11 +42,5 @@ public class playerScript : MonoBehaviour {
             bookState = 1;
             book.SetActive(true);
         }
-    }
-
-    public void changeInventoryState(int z)
-    {
-        invState = z;
-        toggleInventory();
     }
 }

@@ -13,16 +13,19 @@ public class bookScript : MonoBehaviour {
     public GameObject _peoplePage;
     private GameObject _currentPage;
 
+    //get player
+    public customerScript _customer;
+
     //page array
     public GameObject[] ingredientPages;
 
     //what pages you are on
     public int pageNum = 0;
-    //private int currMaxPageNum;
+    private int currMaxPageNum;
 
     // Use this for initialization
     void Start () {
-        im.GetComponent<CanvasRenderer>().SetAlpha(250f);
+       //  im.GetComponent<CanvasRenderer>().SetAlpha(250f);
 
         _ingredientPage = GameObject.FindGameObjectWithTag("ingredientPage");
         _recipePage = GameObject.FindGameObjectWithTag("recipePage");
@@ -30,8 +33,6 @@ public class bookScript : MonoBehaviour {
         _peoplePage = GameObject.FindGameObjectWithTag("peoplePage");
 
         _currentPage = _tomePage; // set default
-        //currMaxPageNum = transform.childCount;
-        //Debug.Log(currMaxPageNum);
 
         _ingredientPage.SetActive(false);
         _recipePage.SetActive(false);
@@ -41,12 +42,23 @@ public class bookScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+        if (_currentPage.name == _ingredientPage.name && _customer.charaState == 1)
+        {
+            currMaxPageNum = _currentPage.transform.childCount - 5;
+        }else if (_currentPage.name == _ingredientPage.name && _customer.charaState == 2)
+        {
+            currMaxPageNum = _currentPage.transform.childCount - 4;
+
+        }
+        else
+        {
+            currMaxPageNum = _currentPage.transform.childCount - 3;
+        }
+    }
 
     public void flipPage()
     {
-        if (pageNum < 3)
+        if (pageNum < currMaxPageNum)
         {
             _currentPage.transform.GetChild(pageNum).gameObject.SetActive(false);
             pageNum++;
@@ -64,7 +76,6 @@ public class bookScript : MonoBehaviour {
         }
     }
 
-
     public void ingredientSwitch()
     {
         _ingredientPage.SetActive(true);
@@ -73,6 +84,13 @@ public class bookScript : MonoBehaviour {
         _peoplePage.SetActive(false);
 
         _currentPage = _ingredientPage;
+        currMaxPageNum = _currentPage.transform.childCount - 2;
+        for (int i = 0; i < currMaxPageNum; i++)
+        {
+             _currentPage.transform.GetChild(i).gameObject.SetActive(false);
+        }
+        pageNum = 0;
+        _currentPage.transform.GetChild(pageNum).gameObject.SetActive(true);
     }
 
     public void tomeSwitch()
@@ -83,6 +101,13 @@ public class bookScript : MonoBehaviour {
         _peoplePage.SetActive(false);
 
         _currentPage = GameObject.FindGameObjectWithTag("tomePage");
+        currMaxPageNum = _currentPage.transform.childCount - 3;
+        for (int i = 0; i < currMaxPageNum - 1; i++)
+        {
+            _currentPage.transform.GetChild(i).gameObject.SetActive(false);
+        }
+        pageNum = 0;
+        _currentPage.transform.GetChild(pageNum).gameObject.SetActive(true);
     }
 
     public void recipeSwitch()
@@ -93,6 +118,13 @@ public class bookScript : MonoBehaviour {
         _peoplePage.SetActive(false);
 
         _currentPage = GameObject.FindGameObjectWithTag("recipePage");
+        currMaxPageNum = _currentPage.transform.childCount - 3;
+        for (int i = 0; i < currMaxPageNum - 1; i++)
+        {
+            _currentPage.transform.GetChild(i).gameObject.SetActive(false);
+        }
+        pageNum = 0;
+        _currentPage.transform.GetChild(pageNum).gameObject.SetActive(true);
     }
 
     public void peopleSwitch()
@@ -103,5 +135,12 @@ public class bookScript : MonoBehaviour {
         _peoplePage.SetActive(true);
 
         _currentPage = GameObject.FindGameObjectWithTag("peoplePage");
+        currMaxPageNum = _currentPage.transform.childCount - 3;
+        for (int i = 0; i < currMaxPageNum - 1; i++)
+        {
+            _currentPage.transform.GetChild(i).gameObject.SetActive(false);
+        }
+        pageNum = 0;
+        _currentPage.transform.GetChild(pageNum).gameObject.SetActive(true);
     }
 }
