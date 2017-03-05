@@ -10,12 +10,15 @@ public class bookScript : MonoBehaviour {
     public GameObject _ingredientPage;
     public GameObject _tomePage;
     public GameObject _recipePage;
+    public GameObject _peoplePage;
+    private GameObject _currentPage;
 
     //page array
     public GameObject[] ingredientPages;
 
     //what pages you are on
     public int pageNum = 0;
+    //private int currMaxPageNum;
 
     // Use this for initialization
     void Start () {
@@ -24,10 +27,16 @@ public class bookScript : MonoBehaviour {
         _ingredientPage = GameObject.FindGameObjectWithTag("ingredientPage");
         _recipePage = GameObject.FindGameObjectWithTag("recipePage");
         _tomePage = GameObject.FindGameObjectWithTag("tomePage");
+        _peoplePage = GameObject.FindGameObjectWithTag("peoplePage");
+
+        _currentPage = _tomePage; // set default
+        //currMaxPageNum = transform.childCount;
+        //Debug.Log(currMaxPageNum);
 
         _ingredientPage.SetActive(false);
         _recipePage.SetActive(false);
         _tomePage.SetActive(true);
+        _peoplePage.SetActive(false);
     }
 	
 	// Update is called once per frame
@@ -39,9 +48,9 @@ public class bookScript : MonoBehaviour {
     {
         if (pageNum < 3)
         {
-            _ingredientPage.transform.GetChild(pageNum).gameObject.SetActive(false);
+            _currentPage.transform.GetChild(pageNum).gameObject.SetActive(false);
             pageNum++;
-            _ingredientPage.transform.GetChild(pageNum).gameObject.SetActive(true);
+            _currentPage.transform.GetChild(pageNum).gameObject.SetActive(true);
         }
     }
 
@@ -49,9 +58,9 @@ public class bookScript : MonoBehaviour {
     {
         if (pageNum > 0)
         {
-            _ingredientPage.transform.GetChild(pageNum).gameObject.SetActive(false);
+            _currentPage.transform.GetChild(pageNum).gameObject.SetActive(false);
             pageNum--;
-            _ingredientPage.transform.GetChild(pageNum).gameObject.SetActive(true);
+            _currentPage.transform.GetChild(pageNum).gameObject.SetActive(true);
         }
     }
 
@@ -61,6 +70,9 @@ public class bookScript : MonoBehaviour {
         _ingredientPage.SetActive(true);
         _recipePage.SetActive(false);
         _tomePage.SetActive(false);
+        _peoplePage.SetActive(false);
+
+        _currentPage = _ingredientPage;
     }
 
     public void tomeSwitch()
@@ -68,6 +80,9 @@ public class bookScript : MonoBehaviour {
         _ingredientPage.SetActive(false);
         _recipePage.SetActive(false);
         _tomePage.SetActive(true);
+        _peoplePage.SetActive(false);
+
+        _currentPage = GameObject.FindGameObjectWithTag("tomePage");
     }
 
     public void recipeSwitch()
@@ -75,5 +90,18 @@ public class bookScript : MonoBehaviour {
         _ingredientPage.SetActive(false);
         _recipePage.SetActive(true);
         _tomePage.SetActive(false);
+        _peoplePage.SetActive(false);
+
+        _currentPage = GameObject.FindGameObjectWithTag("recipePage");
+    }
+
+    public void peopleSwitch()
+    {
+        _ingredientPage.SetActive(false);
+        _recipePage.SetActive(false);
+        _tomePage.SetActive(false);
+        _peoplePage.SetActive(true);
+
+        _currentPage = GameObject.FindGameObjectWithTag("peoplePage");
     }
 }

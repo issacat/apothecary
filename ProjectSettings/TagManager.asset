@@ -21,6 +21,7 @@ TagManager:
   - playerInventory
   - ingredient
   - requestSlot
+  - peoplePage
   layers:
   - Default
   - TransparentFX

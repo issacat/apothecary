@@ -12,7 +12,8 @@ TrueTypeFontImporter:
   fontName: Gentium Basic
   fontNames:
   - Gentium Basic
-  fallbackFontReferences: []
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: f16d4abbb617f584fadc58f792a342fe, type: 3}
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1
