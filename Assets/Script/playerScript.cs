@@ -10,7 +10,7 @@ public class playerScript : MonoBehaviour {
     public int day = 1;
 
     //controls and book are visible
-    public int bookState = 0;
+    public int bookState = 1;
     public GameObject book;
 
     //text for UI
@@ -20,7 +20,8 @@ public class playerScript : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        book.SetActive(false);
+        bookState = 1;
+        book.SetActive(true);
     }
 	
 	// Update is called once per frame
