@@ -94,23 +94,27 @@ public class merchantScript : MonoBehaviour {
                 {
                     Transform panel = merchantInventory[j].transform;
                     GameObject a = (GameObject)Instantiate(Resources.Load("Banya"));
+                    a.name = a.name.Replace("(Clone)", "");
                     a.transform.SetParent(panel.transform, false);
                 }else if (ing == "holly")
                 {
                     Transform panel = merchantInventory[j].transform;
                     GameObject a = (GameObject)Instantiate(Resources.Load("Holly"));
+                    a.name = a.name.Replace("(Clone)", "");
                     a.transform.SetParent(panel.transform, false);
                 }
                 else if (ing == "strength")
                 {
                     Transform panel = merchantInventory[j].transform;
                     GameObject a = (GameObject)Instantiate(Resources.Load("Strength"));
+                    a.name = a.name.Replace("(Clone)", "");
                     a.transform.SetParent(panel.transform, false);
                 }
                 else if (ing == "soothe")
                 {
                     Transform panel = merchantInventory[j].transform;
                     GameObject a = (GameObject)Instantiate(Resources.Load("Soothe"));
+                    a.name = a.name.Replace("(Clone)", "");
                     a.transform.SetParent(panel.transform, false);
                 }
                 break;

@@ -87,6 +87,7 @@ public class ingredientScript : MonoBehaviour {
                 Transform panel = playerInventory[j].transform;
                
                 GameObject a = (GameObject)Instantiate(potionA);
+                a.name = a.name.Replace("(Clone)", "");
                 a.transform.SetParent(panel.transform, false);
                 for (int h = 0; h < m_slots.Length; h++)
                 {
@@ -103,6 +104,7 @@ public class ingredientScript : MonoBehaviour {
                 Transform panel = playerInventory[j].transform;
 
                 GameObject a = (GameObject)Instantiate(potionB);
+                a.name = a.name.Replace("(Clone)", "");
                 a.transform.SetParent(panel.transform, false);
                 for (int h = 0; h < m_slots.Length; h++)
                 {
@@ -119,6 +121,7 @@ public class ingredientScript : MonoBehaviour {
                 Transform panel = playerInventory[j].transform;
 
                 GameObject a = (GameObject)Instantiate(banyaPotion);
+                a.name = a.name.Replace("(Clone)", "");
                 a.transform.SetParent(panel.transform, false);
                 for (int h = 0; h < m_slots.Length; h++)
                 {
@@ -135,6 +138,7 @@ public class ingredientScript : MonoBehaviour {
                 Transform panel = playerInventory[j].transform;
 
                 GameObject a = (GameObject)Instantiate(potionC);
+                a.name = a.name.Replace("(Clone)", "");
                 a.transform.SetParent(panel.transform, false);
                 for (int h = 0; h < m_slots.Length; h++)
                 {

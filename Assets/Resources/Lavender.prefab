@@ -27,7 +27,7 @@ GameObject:
   - component: {fileID: 114478851539566872}
   - component: {fileID: 114433190880610480}
   m_Layer: 5
-  m_Name: Soothe
+  m_Name: Lavender
   m_TagString: ingredient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

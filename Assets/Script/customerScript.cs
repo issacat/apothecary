@@ -175,6 +175,7 @@ public class customerScript : MonoBehaviour
             {
                 Transform panel = requestSlot.transform;
                 GameObject a = (GameObject)Instantiate(Resources.Load("Holly"));
+                a.name = a.name.Replace("(Clone)", "");
                 a.transform.SetParent(panel.transform, false);
             }
         }
@@ -184,6 +185,7 @@ public class customerScript : MonoBehaviour
             {
                 Transform panel = requestSlot.transform;
                 GameObject a = (GameObject)Instantiate(Resources.Load("Banya"));
+                a.name = a.name.Replace("(Clone)", "");
                 a.transform.SetParent(panel.transform, false);
             }
         }

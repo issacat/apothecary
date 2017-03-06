@@ -27,7 +27,7 @@ GameObject:
   - component: {fileID: 114276369160598348}
   - component: {fileID: 114776658520948446}
   m_Layer: 5
-  m_Name: Strength
+  m_Name: Lion's Breathe
   m_TagString: ingredient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
