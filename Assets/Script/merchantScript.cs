@@ -28,8 +28,8 @@ public class merchantScript : MonoBehaviour {
 
         banya = (GameObject)Resources.Load("Banya");
         holly = (GameObject)Resources.Load("Holly");
-        strength = (GameObject)Resources.Load("Strength");
-        soothe = (GameObject)Resources.Load("Soothe"); 
+        strength = (GameObject)Resources.Load("Lion's Breathe");
+        soothe = (GameObject)Resources.Load("Lavender"); 
     }
 	
 	// Update is called once per frame
@@ -106,14 +106,14 @@ public class merchantScript : MonoBehaviour {
                 else if (ing == "strength")
                 {
                     Transform panel = merchantInventory[j].transform;
-                    GameObject a = (GameObject)Instantiate(Resources.Load("Strength"));
+                    GameObject a = (GameObject)Instantiate(Resources.Load("Lion's Breathe"));
                     a.name = a.name.Replace("(Clone)", "");
                     a.transform.SetParent(panel.transform, false);
                 }
                 else if (ing == "soothe")
                 {
                     Transform panel = merchantInventory[j].transform;
-                    GameObject a = (GameObject)Instantiate(Resources.Load("Soothe"));
+                    GameObject a = (GameObject)Instantiate(Resources.Load("Lavender"));
                     a.name = a.name.Replace("(Clone)", "");
                     a.transform.SetParent(panel.transform, false);
                 }
