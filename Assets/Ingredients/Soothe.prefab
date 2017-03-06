@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 114077477646861016}
   - component: {fileID: 61919417089095350}
   - component: {fileID: 114478851539566872}
+  - component: {fileID: 114433190880610480}
   m_Layer: 5
   m_Name: Soothe
   m_TagString: ingredient
@@ -84,6 +85,18 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114433190880610480
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1376786375841644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f1c7c7379d183048b9e649961772f8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ingredient: {fileID: 0}
 --- !u!114 &114478851539566872
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -99,7 +112,7 @@ MonoBehaviour:
   defaultTexture: {fileID: 2800000, guid: 6366254a50f1684439cf6045e9504b74, type: 3}
   hoverItemTexture: {fileID: 2800000, guid: f7e4b7bba8df89c4fb9ab7bc0c5b42c6, type: 3}
   curMode: 1
-  autoCenterHotSpot: 1
+  autoCenterHotSpot: 0
   hotSpotCustom: {x: 10, y: 5}
 --- !u!222 &222626222658367554
 CanvasRenderer:

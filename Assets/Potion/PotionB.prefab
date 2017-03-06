@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 114771052966061984}
   - component: {fileID: 61829631601038788}
   - component: {fileID: 114848653944643286}
+  - component: {fileID: 114566233980471266}
   m_Layer: 5
   m_Name: PotionB
   m_TagString: ingredient
@@ -73,6 +74,18 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114566233980471266
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1980569431836704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f1c7c7379d183048b9e649961772f8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ingredient: {fileID: 0}
 --- !u!114 &114771052966061984
 MonoBehaviour:
   m_ObjectHideFlags: 1

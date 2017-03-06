@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 114219425031523064}
   - component: {fileID: 61911836211947018}
   - component: {fileID: 114097886969567728}
+  - component: {fileID: 114196301351931910}
   m_Layer: 5
   m_Name: BanyaPotion
   m_TagString: ingredient
@@ -63,6 +64,18 @@ MonoBehaviour:
   curMode: 0
   autoCenterHotSpot: 1
   hotSpotCustom: {x: 10, y: 5}
+--- !u!114 &114196301351931910
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1255817194698104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f1c7c7379d183048b9e649961772f8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ingredient: {fileID: 0}
 --- !u!114 &114219425031523064
 MonoBehaviour:
   m_ObjectHideFlags: 1

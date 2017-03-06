@@ -9,13 +9,15 @@ public class HoverScript : MonoBehaviour {
     public Texture2D defaultTexture;
     public Texture2D hoverItemTexture;
     public CursorMode curMode = CursorMode.Auto;
-    public bool autoCenterHotSpot = true;
+    public bool autoCenterHotSpot = false;
     public Vector2 hotSpotCustom = Vector2.zero;
     private Vector2 hotSpotAuto;
 
     // Use this for initialization
     void Start () {
         Vector2 hotSpot;
+
+        autoCenterHotSpot = false;
         if (autoCenterHotSpot)
         {
             hotSpotAuto = new Vector2(defaultTexture.width * 0.5f, defaultTexture.height * 0.5f);
@@ -29,22 +31,22 @@ public class HoverScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
     }
+
+
+    void OnMouseEnter()
+    {
+        if (gameObject.tag == "ingredient")
+        {
+            Cursor.SetCursor(hoverItemTexture, hotSpotCustom, CursorMode.ForceSoftware);
+        }
+        
+    }
+
 
     void OnGUI()
     {
         //GUI.DrawTexture(new Rect(Event.current.mousePosition.x - (cursorSize / 2), Event.current.mousePosition.y - (cursorSize / 2), cursorSize, cursorSize), cursorTex);
-    }
-
-    void OnMouseEnter()
-    {
-        //Debug.Log("random");
-        if (gameObject.tag == "ingredient")
-        {
-            Cursor.SetCursor(hoverItemTexture, hotSpotCustom, CursorMode.ForceSoftware);
-           // Debug.Log("hovering over an ingredient!");
-        }
     }
 
     void OnMouseExit()

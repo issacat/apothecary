@@ -53,6 +53,7 @@
      <Compile Include="Assets\Script\WorldScript.cs" />
      <Compile Include="Assets\Script\bookScript.cs" />
      <Compile Include="Assets\Script\customerScript.cs" />
+     <Compile Include="Assets\Script\ingredientNameGUI.cs" />
      <Compile Include="Assets\Script\ingredientScript.cs" />
      <Compile Include="Assets\Script\playerScript.cs" />
      <Compile Include="Assets\Script\storyScript.cs" />
