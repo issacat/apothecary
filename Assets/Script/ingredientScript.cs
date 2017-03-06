@@ -56,10 +56,10 @@ public class ingredientScript : MonoBehaviour {
         {
             if (m_slots[i] != null)
             {
-                if (m_slots[i].name == banya.name)  banyaT = true;
-                else if (m_slots[i].name == strength.name) strengthT = true;
-                else if (m_slots[i].name == soothe.name) sootheT = true;
-                else if (m_slots[i].name == holly.name) hollyT = true;
+                if (m_slots[i].name.Contains(banya.name))  banyaT = true;
+                else if (m_slots[i].name.Contains(strength.name)) strengthT = true;
+                else if (m_slots[i].name.Contains(soothe.name)) sootheT = true;
+                else if (m_slots[i].name.Contains(holly.name)) hollyT = true;
             }
         }
 
