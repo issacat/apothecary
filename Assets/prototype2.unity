@@ -519,7 +519,7 @@ GameObject:
   - component: {fileID: 77296414}
   m_Layer: 5
   m_Name: Slot (14)
-  m_TagString: Untagged
+  m_TagString: merchantInventory
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1628,7 +1628,7 @@ GameObject:
   - component: {fileID: 192175275}
   m_Layer: 5
   m_Name: Slot (15)
-  m_TagString: Untagged
+  m_TagString: merchantInventory
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1938,7 +1938,7 @@ GameObject:
   - component: {fileID: 214984215}
   m_Layer: 5
   m_Name: Slot (18)
-  m_TagString: Untagged
+  m_TagString: merchantInventory
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2239,7 +2239,7 @@ GameObject:
   - component: {fileID: 252139094}
   m_Layer: 5
   m_Name: Slot (19)
-  m_TagString: Untagged
+  m_TagString: merchantInventory
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2418,7 +2418,7 @@ GameObject:
   - component: {fileID: 267043169}
   m_Layer: 5
   m_Name: Slot (13)
-  m_TagString: Untagged
+  m_TagString: merchantInventory
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2528,7 +2528,7 @@ GameObject:
   - component: {fileID: 289817289}
   m_Layer: 5
   m_Name: Slot (12)
-  m_TagString: Untagged
+  m_TagString: merchantInventory
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3596,22 +3596,22 @@ Prefab:
     - target: {fileID: 224044611139650292, guid: 07cb66eeb63d6974ca36ca6a603e7da1,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 25
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224044611139650292, guid: 07cb66eeb63d6974ca36ca6a603e7da1,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -25
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224044611139650292, guid: 07cb66eeb63d6974ca36ca6a603e7da1,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 40
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224044611139650292, guid: 07cb66eeb63d6974ca36ca6a603e7da1,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 40
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224044611139650292, guid: 07cb66eeb63d6974ca36ca6a603e7da1,
         type: 2}
@@ -3621,7 +3621,7 @@ Prefab:
     - target: {fileID: 224044611139650292, guid: 07cb66eeb63d6974ca36ca6a603e7da1,
         type: 2}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224044611139650292, guid: 07cb66eeb63d6974ca36ca6a603e7da1,
         type: 2}
@@ -3631,7 +3631,7 @@ Prefab:
     - target: {fileID: 224044611139650292, guid: 07cb66eeb63d6974ca36ca6a603e7da1,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224044611139650292, guid: 07cb66eeb63d6974ca36ca6a603e7da1,
         type: 2}
@@ -4085,22 +4085,22 @@ Prefab:
     - target: {fileID: 224370926716802588, guid: ca5ea02098fd2c34782cd701b1dc315e,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 25
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224370926716802588, guid: ca5ea02098fd2c34782cd701b1dc315e,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -25
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224370926716802588, guid: ca5ea02098fd2c34782cd701b1dc315e,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 40
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224370926716802588, guid: ca5ea02098fd2c34782cd701b1dc315e,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 40
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224370926716802588, guid: ca5ea02098fd2c34782cd701b1dc315e,
         type: 2}
@@ -4110,7 +4110,7 @@ Prefab:
     - target: {fileID: 224370926716802588, guid: ca5ea02098fd2c34782cd701b1dc315e,
         type: 2}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224370926716802588, guid: ca5ea02098fd2c34782cd701b1dc315e,
         type: 2}
@@ -4120,7 +4120,7 @@ Prefab:
     - target: {fileID: 224370926716802588, guid: ca5ea02098fd2c34782cd701b1dc315e,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224370926716802588, guid: ca5ea02098fd2c34782cd701b1dc315e,
         type: 2}
@@ -4603,7 +4603,7 @@ GameObject:
   - component: {fileID: 479300883}
   m_Layer: 5
   m_Name: Slot (4)
-  m_TagString: Untagged
+  m_TagString: merchantInventory
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4823,7 +4823,7 @@ GameObject:
   - component: {fileID: 501791296}
   m_Layer: 5
   m_Name: Slot (8)
-  m_TagString: Untagged
+  m_TagString: merchantInventory
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5522,22 +5522,22 @@ Prefab:
     - target: {fileID: 224044611139650292, guid: 07cb66eeb63d6974ca36ca6a603e7da1,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 25
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224044611139650292, guid: 07cb66eeb63d6974ca36ca6a603e7da1,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -25
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224044611139650292, guid: 07cb66eeb63d6974ca36ca6a603e7da1,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 40
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224044611139650292, guid: 07cb66eeb63d6974ca36ca6a603e7da1,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 40
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224044611139650292, guid: 07cb66eeb63d6974ca36ca6a603e7da1,
         type: 2}
@@ -5547,7 +5547,7 @@ Prefab:
     - target: {fileID: 224044611139650292, guid: 07cb66eeb63d6974ca36ca6a603e7da1,
         type: 2}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224044611139650292, guid: 07cb66eeb63d6974ca36ca6a603e7da1,
         type: 2}
@@ -5557,7 +5557,7 @@ Prefab:
     - target: {fileID: 224044611139650292, guid: 07cb66eeb63d6974ca36ca6a603e7da1,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224044611139650292, guid: 07cb66eeb63d6974ca36ca6a603e7da1,
         type: 2}
@@ -5755,7 +5755,7 @@ GameObject:
   - component: {fileID: 649286892}
   m_Layer: 5
   m_Name: Slot (6)
-  m_TagString: Untagged
+  m_TagString: merchantInventory
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6532,7 +6532,7 @@ GameObject:
   - component: {fileID: 824190478}
   m_Layer: 5
   m_Name: Slot (1)
-  m_TagString: Untagged
+  m_TagString: merchantInventory
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6805,22 +6805,22 @@ Prefab:
     - target: {fileID: 224605358296501454, guid: 675df5c0261c4d449b3ab4069fbb9711,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 25
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224605358296501454, guid: 675df5c0261c4d449b3ab4069fbb9711,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -25
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224605358296501454, guid: 675df5c0261c4d449b3ab4069fbb9711,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 40
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224605358296501454, guid: 675df5c0261c4d449b3ab4069fbb9711,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 40
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224605358296501454, guid: 675df5c0261c4d449b3ab4069fbb9711,
         type: 2}
@@ -6830,7 +6830,7 @@ Prefab:
     - target: {fileID: 224605358296501454, guid: 675df5c0261c4d449b3ab4069fbb9711,
         type: 2}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224605358296501454, guid: 675df5c0261c4d449b3ab4069fbb9711,
         type: 2}
@@ -6840,7 +6840,7 @@ Prefab:
     - target: {fileID: 224605358296501454, guid: 675df5c0261c4d449b3ab4069fbb9711,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224605358296501454, guid: 675df5c0261c4d449b3ab4069fbb9711,
         type: 2}
@@ -7431,7 +7431,7 @@ GameObject:
   - component: {fileID: 947836244}
   m_Layer: 5
   m_Name: Slot (11)
-  m_TagString: Untagged
+  m_TagString: merchantInventory
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8119,6 +8119,7 @@ MonoBehaviour:
   _storyMode: {fileID: 0}
   player: {fileID: 2074939674}
   customer: {fileID: 1584544316}
+  merchant: {fileID: 1164555729}
 --- !u!4 &996914104
 Transform:
   m_ObjectHideFlags: 0
@@ -8392,22 +8393,22 @@ Prefab:
     - target: {fileID: 224245674802002498, guid: e69ef57a55d1e9b4d87f1184f82d3798,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 25
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224245674802002498, guid: e69ef57a55d1e9b4d87f1184f82d3798,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -25
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224245674802002498, guid: e69ef57a55d1e9b4d87f1184f82d3798,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 40
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224245674802002498, guid: e69ef57a55d1e9b4d87f1184f82d3798,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 40
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224245674802002498, guid: e69ef57a55d1e9b4d87f1184f82d3798,
         type: 2}
@@ -8417,7 +8418,7 @@ Prefab:
     - target: {fileID: 224245674802002498, guid: e69ef57a55d1e9b4d87f1184f82d3798,
         type: 2}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224245674802002498, guid: e69ef57a55d1e9b4d87f1184f82d3798,
         type: 2}
@@ -8427,7 +8428,7 @@ Prefab:
     - target: {fileID: 224245674802002498, guid: e69ef57a55d1e9b4d87f1184f82d3798,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224245674802002498, guid: e69ef57a55d1e9b4d87f1184f82d3798,
         type: 2}
@@ -8457,7 +8458,7 @@ GameObject:
   - component: {fileID: 1041991490}
   m_Layer: 5
   m_Name: Slot (9)
-  m_TagString: Untagged
+  m_TagString: merchantInventory
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8602,22 +8603,22 @@ Prefab:
     - target: {fileID: 224605358296501454, guid: 675df5c0261c4d449b3ab4069fbb9711,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 25
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224605358296501454, guid: 675df5c0261c4d449b3ab4069fbb9711,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -25
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224605358296501454, guid: 675df5c0261c4d449b3ab4069fbb9711,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 40
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224605358296501454, guid: 675df5c0261c4d449b3ab4069fbb9711,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 40
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224605358296501454, guid: 675df5c0261c4d449b3ab4069fbb9711,
         type: 2}
@@ -8627,7 +8628,7 @@ Prefab:
     - target: {fileID: 224605358296501454, guid: 675df5c0261c4d449b3ab4069fbb9711,
         type: 2}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224605358296501454, guid: 675df5c0261c4d449b3ab4069fbb9711,
         type: 2}
@@ -8637,7 +8638,7 @@ Prefab:
     - target: {fileID: 224605358296501454, guid: 675df5c0261c4d449b3ab4069fbb9711,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224605358296501454, guid: 675df5c0261c4d449b3ab4069fbb9711,
         type: 2}
@@ -8742,7 +8743,7 @@ GameObject:
   - component: {fileID: 1056184535}
   m_Layer: 5
   m_Name: Slot (16)
-  m_TagString: Untagged
+  m_TagString: merchantInventory
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9429,7 +9430,7 @@ GameObject:
   - component: {fileID: 1156642557}
   m_Layer: 5
   m_Name: Slot (5)
-  m_TagString: Untagged
+  m_TagString: merchantInventory
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9703,7 +9704,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: 0
-  dialogText: {fileID: 0}
+  dialogText: {fileID: 989007151}
+  merchantInventory: []
+  banya: {fileID: 0}
+  holly: {fileID: 0}
+  strength: {fileID: 0}
+  soothe: {fileID: 0}
 --- !u!1 &1166985996
 GameObject:
   m_ObjectHideFlags: 0
@@ -11005,7 +11011,7 @@ GameObject:
   - component: {fileID: 1303204441}
   m_Layer: 5
   m_Name: Slot
-  m_TagString: Untagged
+  m_TagString: merchantInventory
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11750,22 +11756,22 @@ Prefab:
     - target: {fileID: 224370926716802588, guid: ca5ea02098fd2c34782cd701b1dc315e,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 25
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224370926716802588, guid: ca5ea02098fd2c34782cd701b1dc315e,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -25
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224370926716802588, guid: ca5ea02098fd2c34782cd701b1dc315e,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 40
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224370926716802588, guid: ca5ea02098fd2c34782cd701b1dc315e,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 40
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224370926716802588, guid: ca5ea02098fd2c34782cd701b1dc315e,
         type: 2}
@@ -11775,7 +11781,7 @@ Prefab:
     - target: {fileID: 224370926716802588, guid: ca5ea02098fd2c34782cd701b1dc315e,
         type: 2}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224370926716802588, guid: ca5ea02098fd2c34782cd701b1dc315e,
         type: 2}
@@ -11785,7 +11791,7 @@ Prefab:
     - target: {fileID: 224370926716802588, guid: ca5ea02098fd2c34782cd701b1dc315e,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224370926716802588, guid: ca5ea02098fd2c34782cd701b1dc315e,
         type: 2}
@@ -11827,7 +11833,7 @@ GameObject:
   - component: {fileID: 1408379030}
   m_Layer: 5
   m_Name: Slot (7)
-  m_TagString: Untagged
+  m_TagString: merchantInventory
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12675,22 +12681,22 @@ Prefab:
     - target: {fileID: 224245674802002498, guid: e69ef57a55d1e9b4d87f1184f82d3798,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 25
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224245674802002498, guid: e69ef57a55d1e9b4d87f1184f82d3798,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -25
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224245674802002498, guid: e69ef57a55d1e9b4d87f1184f82d3798,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 40
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224245674802002498, guid: e69ef57a55d1e9b4d87f1184f82d3798,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 40
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224245674802002498, guid: e69ef57a55d1e9b4d87f1184f82d3798,
         type: 2}
@@ -12700,7 +12706,7 @@ Prefab:
     - target: {fileID: 224245674802002498, guid: e69ef57a55d1e9b4d87f1184f82d3798,
         type: 2}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224245674802002498, guid: e69ef57a55d1e9b4d87f1184f82d3798,
         type: 2}
@@ -12710,7 +12716,7 @@ Prefab:
     - target: {fileID: 224245674802002498, guid: e69ef57a55d1e9b4d87f1184f82d3798,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224245674802002498, guid: e69ef57a55d1e9b4d87f1184f82d3798,
         type: 2}
@@ -12821,7 +12827,7 @@ GameObject:
   - component: {fileID: 1530529818}
   m_Layer: 5
   m_Name: Slot (17)
-  m_TagString: Untagged
+  m_TagString: merchantInventory
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13492,7 +13498,7 @@ GameObject:
   - component: {fileID: 1583722657}
   m_Layer: 5
   m_Name: Slot (3)
-  m_TagString: Untagged
+  m_TagString: merchantInventory
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14066,7 +14072,7 @@ GameObject:
   - component: {fileID: 1657646015}
   m_Layer: 5
   m_Name: Slot (2)
-  m_TagString: Untagged
+  m_TagString: merchantInventory
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14615,7 +14621,7 @@ GameObject:
   - component: {fileID: 1738687188}
   m_Layer: 5
   m_Name: Slot (10)
-  m_TagString: Untagged
+  m_TagString: merchantInventory
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

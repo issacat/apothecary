@@ -49,12 +49,12 @@
      <Compile Include="Assets\Script\DragHandler.cs" />
      <Compile Include="Assets\Script\HoverScript.cs" />
      <Compile Include="Assets\Script\Slot.cs" />
-     <Compile Include="Assets\Script\UIDialog.cs" />
      <Compile Include="Assets\Script\WorldScript.cs" />
      <Compile Include="Assets\Script\bookScript.cs" />
      <Compile Include="Assets\Script\customerScript.cs" />
      <Compile Include="Assets\Script\ingredientNameGUI.cs" />
      <Compile Include="Assets\Script\ingredientScript.cs" />
+     <Compile Include="Assets\Script\merchantScript.cs" />
      <Compile Include="Assets\Script\playerScript.cs" />
      <Compile Include="Assets\Script\storyScript.cs" />
      <None Include="Assets\Standard Assets\Prototyping\Shaders\WorldCoordDiffuse.shader" />

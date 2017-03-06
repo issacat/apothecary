@@ -22,6 +22,7 @@ TagManager:
   - ingredient
   - requestSlot
   - peoplePage
+  - merchantInventory
   layers:
   - Default
   - TransparentFX

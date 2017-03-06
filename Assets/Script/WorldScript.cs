@@ -20,6 +20,7 @@ public class WorldScript : MonoBehaviour {
 
     public playerScript player;
     public customerScript customer;
+    public merchantScript merchant;
 
 
     void Awake()
@@ -52,7 +53,6 @@ public class WorldScript : MonoBehaviour {
             //Debug.Log("we are in merchant mode");
 
             _merchantMode.SetActive(true);
-            _player.SetActive(true);
             _mainMenuMode.SetActive(false);
             _storyMode.SetActive(false);
         }
@@ -60,6 +60,7 @@ public class WorldScript : MonoBehaviour {
         if (menuState == MenuState.storyMode)
         {
             _merchantMode.SetActive(false);
+            _player.SetActive(true);
             _mainMenuMode.SetActive(false);
             _storyMode.SetActive(true);
         }
@@ -69,7 +70,7 @@ public class WorldScript : MonoBehaviour {
     {
         if (menuState == MenuState.mainMenu)
         {
-            menuState = MenuState.merchantMode;
+            menuState = MenuState.storyMode;
            // Debug.Log("change state");
         }
 
@@ -84,7 +85,8 @@ public class WorldScript : MonoBehaviour {
     {
         menuState = MenuState.merchantMode;
         player.day++;
-        if(customer.charaState %2 == 0)
+        merchant.checkIngredient();
+        if (customer.charaState %2 == 0)
         {
             customer.charaState++;
             customer.setChara();
