@@ -30,6 +30,9 @@ public class customerScript : MonoBehaviour
     public GameObject potionC;
     public GameObject banyaPotion;
 
+    //player
+    public GameObject[] playerInventory;
+
 
     //max counts for request dialogueState numbers
     int muu1MaxDS = 4;
@@ -46,7 +49,7 @@ public class customerScript : MonoBehaviour
         request = potionA;
 
         sprite = GameObject.Find("CustomerSprite");
-      
+        playerInventory = GameObject.FindGameObjectsWithTag("playerInventory");
     }
 
     // Update is called once per frame
@@ -159,6 +162,28 @@ public class customerScript : MonoBehaviour
                 Destroy(requestSlot.transform.GetChild(0).gameObject);
                 charaState++;
                 dialogState = 0; // reset dialogue to start from beginning
+                charGiveItems();
+            }
+        }
+    }
+
+    public void charGiveItems()
+    {
+        if (charaState == 2)
+        {
+            Debug.Log("finished request");
+            for (int j = 0; j < playerInventory.Length; j++)
+            {
+                Debug.Log("inside loop");
+                if (playerInventory[j].gameObject.transform.childCount == 0)
+                {
+                    Debug.Log("inside gameobject.transform.childCount == 0");
+                    Transform panel = playerInventory[j].transform;
+                    GameObject a = (GameObject)Instantiate(Resources.Load("Holly"));
+                    a.transform.SetParent(panel.transform, false);
+                    
+                    break;
+                }
             }
         }
     }
