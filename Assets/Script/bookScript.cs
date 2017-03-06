@@ -42,10 +42,10 @@ public class bookScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (_currentPage.name == _ingredientPage.name && _customer.charaState == 1)
+        if ((_currentPage.name == _ingredientPage.name || _currentPage.name == _recipePage.name) && _customer.charaState == 1)
         {
             currMaxPageNum = _currentPage.transform.childCount - 5;
-        }else if (_currentPage.name == _ingredientPage.name && _customer.charaState == 2)
+        }else if ((_currentPage.name == _ingredientPage.name || _currentPage.name == _recipePage.name) && _customer.charaState == 2)
         {
             currMaxPageNum = _currentPage.transform.childCount - 4;
 
@@ -68,11 +68,23 @@ public class bookScript : MonoBehaviour {
 
     public void backPage()
     {
-        if (pageNum > 0)
+        if (_currentPage.name == _recipePage.name && _customer.charaState >= 2)
         {
-            _currentPage.transform.GetChild(pageNum).gameObject.SetActive(false);
-            pageNum--;
-            _currentPage.transform.GetChild(pageNum).gameObject.SetActive(true);
+            if (pageNum > 1)
+            {
+                _currentPage.transform.GetChild(pageNum).gameObject.SetActive(false);
+                pageNum--;
+                _currentPage.transform.GetChild(pageNum).gameObject.SetActive(true);
+            }
+        }
+        else
+        {
+            if (pageNum > 0)
+            {
+                _currentPage.transform.GetChild(pageNum).gameObject.SetActive(false);
+                pageNum--;
+                _currentPage.transform.GetChild(pageNum).gameObject.SetActive(true);
+            }
         }
     }
 
@@ -123,7 +135,12 @@ public class bookScript : MonoBehaviour {
         {
             _currentPage.transform.GetChild(i).gameObject.SetActive(false);
         }
-        pageNum = 0;
+        
+        if(_customer.charaState == 1)
+        {
+            pageNum = 0;
+        }else pageNum = 1;
+
         _currentPage.transform.GetChild(pageNum).gameObject.SetActive(true);
     }
 

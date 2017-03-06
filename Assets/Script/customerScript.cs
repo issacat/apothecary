@@ -171,21 +171,23 @@ public class customerScript : MonoBehaviour
     {
         if (charaState == 2)
         {
-            Debug.Log("finished request");
-            for (int j = 0; j < playerInventory.Length; j++)
+            if (requestSlot.transform.childCount != 0)
             {
-                Debug.Log("inside loop");
-                if (playerInventory[j].gameObject.transform.childCount == 0)
-                {
-                    Debug.Log("inside gameobject.transform.childCount == 0");
-                    Transform panel = playerInventory[j].transform;
-                    GameObject a = (GameObject)Instantiate(Resources.Load("Holly"));
-                    a.transform.SetParent(panel.transform, false);
-                    
-                    break;
-                }
+                Transform panel = requestSlot.transform;
+                GameObject a = (GameObject)Instantiate(Resources.Load("Holly"));
+                a.transform.SetParent(panel.transform, false);
             }
         }
+        if (charaState == 4)
+        {
+            if (requestSlot.transform.childCount != 0)
+            {
+                Transform panel = requestSlot.transform;
+                GameObject a = (GameObject)Instantiate(Resources.Load("Banya"));
+                a.transform.SetParent(panel.transform, false);
+            }
+        }
+
     }
 
     public void moveForward()

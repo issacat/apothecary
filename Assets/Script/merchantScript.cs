@@ -59,17 +59,17 @@ public class merchantScript : MonoBehaviour {
             if (merchantInventory[i].gameObject.transform.childCount != 0)
             {
                 //Debug.Log(merchantInventory[i].transform.GetChild(0).name);
-                if (merchantInventory[i].transform.GetChild(0).name.Contains(banya.name)) banyaT = true;
-                else if (merchantInventory[i].transform.GetChild(0).name.Contains(strength.name)) strengthT = true;
+                /*if (merchantInventory[i].transform.GetChild(0).name.Contains(banya.name)) banyaT = true;
+                else */ if (merchantInventory[i].transform.GetChild(0).name.Contains(strength.name)) strengthT = true;
                 else if (merchantInventory[i].transform.GetChild(0).name.Contains(soothe.name)) sootheT = true;
                 else if (merchantInventory[i].transform.GetChild(0).name.Contains(holly.name)) hollyT = true;
             }
         }
 
-        if (banyaT == false)
+       /* if (banyaT == false)
         {
             addIngredient("banya");
-        }
+        }*/
         if (hollyT == false)
         {
             addIngredient("holly");
