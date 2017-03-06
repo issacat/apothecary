@@ -34,6 +34,7 @@ public class customerScript : MonoBehaviour
     //max counts for request dialogueState numbers
     int muu1MaxDS = 4;
     int muu2MaxDS = 9;
+    int muu3MaxDS = 4;
 
     // Use this for initialization
     void Start()
@@ -115,7 +116,35 @@ public class customerScript : MonoBehaviour
                 dialogString = "<b>Apothecary:</b> I see.... Then I can take these as payment. Just wait a moment and I’ll get something for you.";
             }
         }
+        else if (charaState == 4)
+        {
+            dialogString = "<b>Muuya:</b> Thank you again!Ummm, I also picked some banya pine; it's hard to come by around the village, and this was the greenest I could find!";
+        }
+        else if (charaState == 5) //request num 3
+        {
+            if (dialogState == 0)
+            {
+                dialogString = "<b>Familiar:</b> Good afternoon, Apothecary. We are the familiars of our Mistress Yagi, the Witch of the Woods. My kitty friend and I have been touched by little Muuya’s kindness, bringing us treats and warm words when our own Mistress has spoken nothing but insults. Of course, the Mistress hasn’t always been like this, but being far from one’s homeland for too long does strange things.";
+            }
+            else if (dialogState == 1)
+            {
+                dialogString = "<b>Apothecary:</b> Mistress Yagi doesn't seem to be well, with aches and headaches all over! And I don't seem to be of much help...";
+            }
+            else if (dialogState == 2)
+            {
+                dialogString = "<b>Familiar:</b> You see, we’re from a land of hot springs, but being in this Far North with want of warmth has frozen many things both within and without.";
+            }
+            else if (dialogState == 3)
+            {
+                dialogString = "<b>Apothecary:</b> Ah, perhaps something hot and relaxing would help Mistress Yagi? Her aching only seems to be getting worse.";
+            }
+        }
+        else if (charaState == 6)
+        {
+            dialogString = "Will this do as payment?";
+        }
     }
+       
 
     public void checkRequest()
     {
@@ -149,6 +178,14 @@ public class customerScript : MonoBehaviour
             }
             if (dialogState >= muu2MaxDS) dialogState = 0;
         }
+        if (charaState == 5)
+        {
+            if (dialogState < muu3MaxDS)
+            {
+                dialogState++;
+            }
+            if (dialogState >= muu3MaxDS) dialogState = 0;
+        }
     }
 
     public void setChara()
@@ -162,6 +199,11 @@ public class customerScript : MonoBehaviour
         else if (charaState == 3)
         {
             request = potionB;
+            
+        }
+        else if (charaState == 5)
+        {
+            request = banyaPotion;
             sprite.GetComponent<SpriteRenderer>().sprite = chara2;
         }
     }

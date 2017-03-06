@@ -84,9 +84,10 @@ public class WorldScript : MonoBehaviour {
     {
         menuState = MenuState.merchantMode;
         player.day++;
-        if(customer.charaState == 2)
+        if(customer.charaState %2 == 0)
         {
             customer.charaState++;
+            customer.setChara();
             player.money += 50;
             player.reputation += 10;
         }
