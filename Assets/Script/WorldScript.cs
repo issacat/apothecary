@@ -34,6 +34,8 @@ public class WorldScript : MonoBehaviour {
         _merchantMode.SetActive(false);
         _player.SetActive(false);
         _storyMode.SetActive(false);
+
+        Cursor.lockState = CursorLockMode.Confined;
     }
 
 	// Use this for initialization

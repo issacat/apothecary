@@ -42,18 +42,36 @@ public class bookScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if ((_currentPage.name == _ingredientPage.name || _currentPage.name == _recipePage.name) && _customer.charaState == 1)
+        if ((_currentPage.name == _ingredientPage.name) && _customer.charaState == 1)
+        {
+            currMaxPageNum = _currentPage.transform.childCount - 6;
+        }else if ((_currentPage.name == _ingredientPage.name) && _customer.charaState >= 2 && _customer.charaState < 4)
         {
             currMaxPageNum = _currentPage.transform.childCount - 5;
-        }else if ((_currentPage.name == _ingredientPage.name || _currentPage.name == _recipePage.name) && _customer.charaState == 2)
+
+        }else if ((_currentPage.name == _ingredientPage.name) && _customer.charaState >= 4)
         {
             currMaxPageNum = _currentPage.transform.childCount - 4;
+        }
+        else if ((_currentPage.name == _recipePage.name) && _customer.charaState == 1)
+        {
+            currMaxPageNum = _currentPage.transform.childCount - 7;
+        }
+        else if ((_currentPage.name == _recipePage.name) && _customer.charaState >= 2 && _customer.charaState < 4)
+        {
+            currMaxPageNum = _currentPage.transform.childCount - 6;
+
+        }
+        else if ((_currentPage.name == _recipePage.name) && _customer.charaState >= 4)
+        {
+            currMaxPageNum = _currentPage.transform.childCount - 5;
 
         }
         else
         {
             currMaxPageNum = _currentPage.transform.childCount - 3;
         }
+
     }
 
     public void flipPage()
@@ -152,7 +170,7 @@ public class bookScript : MonoBehaviour {
         _peoplePage.SetActive(true);
 
         _currentPage = GameObject.FindGameObjectWithTag("peoplePage");
-        currMaxPageNum = _currentPage.transform.childCount - 3;
+        currMaxPageNum = _currentPage.transform.childCount - 1;
         for (int i = 0; i < currMaxPageNum - 1; i++)
         {
             _currentPage.transform.GetChild(i).gameObject.SetActive(false);
