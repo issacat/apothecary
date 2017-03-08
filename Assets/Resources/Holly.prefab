@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 61455550846794140}
   - component: {fileID: 114145109509305022}
   - component: {fileID: 114727131288398664}
+  - component: {fileID: 132139341453249116}
   m_Layer: 5
   m_Name: Holly
   m_TagString: ingredient
@@ -114,6 +115,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _ingredient: {fileID: 0}
+--- !u!132 &132139341453249116
+GUIText:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1096367435326378}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Text: 
+  m_Anchor: 0
+  m_Alignment: 0
+  m_PixelOffset: {x: 0, y: 0}
+  m_LineSpacing: 1
+  m_TabSize: 4
+  m_Font: {fileID: 12800000, guid: 68520f8ea1c3d044ea88c445b4935d9e, type: 3}
+  m_Material: {fileID: 0}
+  m_FontSize: 0
+  m_FontStyle: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_PixelCorrect: 1
+  m_RichText: 1
 --- !u!222 &222831882824734388
 CanvasRenderer:
   m_ObjectHideFlags: 1

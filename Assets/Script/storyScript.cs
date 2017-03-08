@@ -28,7 +28,7 @@ public class storyScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (screen == PresentScreen.storeMode)
+        /*if (screen == PresentScreen.storeMode)
         {
            // Debug.Log("we are in the store");
 
@@ -42,7 +42,7 @@ public class storyScript : MonoBehaviour {
 
             _storeMode.SetActive(false);
             _preparationMode.SetActive(true);
-        }
+        }*/
     }
 
     public void switchStore()

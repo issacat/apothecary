@@ -37,7 +37,7 @@ public class customerScript : MonoBehaviour
     //max counts for request dialogueState numbers
     int muu1MaxDS = 4;
     int muu2MaxDS = 9;
-    int muu3MaxDS = 5;
+    int muu3MaxDS = 6;
 
     // Use this for initialization
     void Start()
@@ -127,28 +127,32 @@ public class customerScript : MonoBehaviour
         {
             if (dialogState == 0)
             {
-                dialogString = "<b>Familiar:</b> Good afternoon, Apothecary. We are the familiars of our Mistress Yagi, the Witch of the Woods. ";
+                dialogString = "<b>Raspu:</b> Good afternoon, Apothecary. We are the familiars of our Mistress Yagi, the Witch of the Woods. I am Raspu, the Dog of Clouds.";
             }
             else if (dialogState == 1)
             {
-                dialogString = "My kitty friend and I have been touched by little Muuya’s kindness, bringing us treats and warm words when our own Mistress has spoken nothing but insults. Of course, the Mistress hasn’t always been like this, but being far from one’s homeland for too long does strange things.";
+                dialogString = "<b>Raspu:</b> My kitty friend, Itsa, and I have been touched by little Muuya’s kindness, bringing us treats and warm words.";
             }
             else if (dialogState == 2)
             {
-                dialogString = "<b>Apothecary:</b> Mistress Yagi doesn't seem to be well, with aches and headaches all over! And I don't seem to be of much help...";
+                dialogString = "<b>Itsa:</b> Our own Mistress has spoken nothing but insults. Of course, she hasn’t always been like this... Being far from one’s homeland for too long does strange things.";
             }
             else if (dialogState == 3)
             {
-                dialogString = "<b>Familiar:</b> You see, we’re from a land of hot springs, but being in this Far North with want of warmth has frozen many things both within and without.";
+                dialogString = "<b>Itsa:</b> Our Mistress isn't well, with aches and headaches all over! Even Muuya's kindness isn't of much help.";
             }
             else if (dialogState == 4)
             {
-                dialogString = "<b>Apothecary:</b> Ah, perhaps something hot and relaxing would help Mistress Yagi? Her aching only seems to be getting worse.";
+                dialogString = "<b>Raspu:</b> You see, we’re from a land of hot springs, but being in this Far North with want of warmth has frozen many things both within and without.";
+            }
+            else if (dialogState == 5)
+            {
+                dialogString = "<b>Apothecary:</b> Ah, perhaps something <b>hot</b> and <b>relaxing</b> would help Mistress Yagi?";
             }
         }
         else if (charaState == 6)
         {
-            dialogString = "Will this do as payment?";
+            dialogString = "<b>Familiar:</b> Thank you, hopefully this will help her if even for a little while.";
         }
     }
        

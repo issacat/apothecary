@@ -28,7 +28,7 @@ public class merchantScript : MonoBehaviour {
 
         banya = (GameObject)Resources.Load("Banya");
         holly = (GameObject)Resources.Load("Holly");
-        strength = (GameObject)Resources.Load("Lion's Breathe");
+        strength = (GameObject)Resources.Load("Lion's Breath");
         soothe = (GameObject)Resources.Load("Lavender"); 
     }
 	
@@ -38,12 +38,12 @@ public class merchantScript : MonoBehaviour {
 
         if (state == 0)
         {
-            dialogString = "Welcome! What can I get you today?";
+            dialogString = "<b>Tradesman Ilo:</b> Goodday Apothecary! What would you like?";
         }
 
         if (state == 1)
         {
-            dialogString = "I've heard many good things from you.";
+            dialogString = "<b>Little Mina:</b> I've heard so many good things about you!";
         }
 	}
 
@@ -106,7 +106,7 @@ public class merchantScript : MonoBehaviour {
                 else if (ing == "strength")
                 {
                     Transform panel = merchantInventory[j].transform;
-                    GameObject a = (GameObject)Instantiate(Resources.Load("Lion's Breathe"));
+                    GameObject a = (GameObject)Instantiate(Resources.Load("Lion's Breath"));
                     a.name = a.name.Replace("(Clone)", "");
                     a.transform.SetParent(panel.transform, false);
                 }
