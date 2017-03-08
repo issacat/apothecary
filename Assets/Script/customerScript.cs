@@ -230,7 +230,7 @@ public class customerScript : MonoBehaviour
         if (charaState == 1)
         {
             request = potionA;
-            sprite.GetComponent<SpriteRenderer>().sprite = chara1;
+            sprite.GetComponent<Image>().sprite = chara1;
 
         }
         else if (charaState == 3)
@@ -241,7 +241,7 @@ public class customerScript : MonoBehaviour
         else if (charaState == 5)
         {
             request = banyaPotion;
-            sprite.GetComponent<SpriteRenderer>().sprite = chara2;
+            sprite.GetComponent<Image>().sprite = chara2;
         }
     }
 }
