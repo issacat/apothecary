@@ -24,13 +24,34 @@ public class ingredientScript : MonoBehaviour {
     public GameObject potionC;
     public GameObject banyaPotion;
 
+
+    //new system
+    public GameObject defaultIngredient;
+    public ingredientAttribute ing;
+
+    public Dictionary<string, ingredientAttribute> ingredients;
+
+
     // Use this for initialization
     void Start () {
-        mixingInventory = GameObject.FindGameObjectsWithTag("mixingInventory");
-        playerInventory = GameObject.FindGameObjectsWithTag("playerInventory");
-        m_slots = new GameObject[mixingInventory.Length];
-        m_ingredients = new ArrayList();
-        p_ingredients = new ArrayList();
+         mixingInventory = GameObject.FindGameObjectsWithTag("mixingInventory");
+         playerInventory = GameObject.FindGameObjectsWithTag("playerInventory");
+         m_slots = new GameObject[mixingInventory.Length];
+         m_ingredients = new ArrayList();
+         p_ingredients = new ArrayList();
+
+        ingredients = new Dictionary<string, ingredientAttribute>()
+        {
+            {"Midnight Fern", ing},
+            {"Blooming Fern", ing},
+            {"Tormented Fern", ing},
+            {"Violet Perunika", ing},
+            {"Torched Perunika", ing},
+            {"Divine Perunika", ing},
+            {"Dwarf Billberry", ing},
+            {"Bog Billberry", ing},
+            {"Ethereal Billberry", ing}
+        };
     }
 
     void Update()
@@ -42,7 +63,7 @@ public class ingredientScript : MonoBehaviour {
                 m_slots[i] = mixingInventory[i].gameObject.transform.GetChild(0).gameObject;
             }
             else m_slots[i] = null;
-        }
+        } 
     }
 
     public void mix()
@@ -63,16 +84,23 @@ public class ingredientScript : MonoBehaviour {
             }
         }
 
+        Debug.Log(strengthT);
+        Debug.Log(sootheT);
+
         if (banyaT == false && hollyT == false && strengthT == true && sootheT == true)
         {
             addPotion(1);
-        } else if (banyaT == false && hollyT == true && strengthT == true && sootheT == true)
+        } else if (banyaT == false && hollyT == true && strengthT == false && sootheT == true)
         {
             addPotion(2);
-        } else if (banyaT == true && hollyT == false && strengthT == false && sootheT == true)
+        } else if (banyaT == false && hollyT == true && strengthT == true && sootheT == false)
         {
             addPotion(3);
-        } else if (banyaT == true && hollyT == true && strengthT == false && sootheT == true)
+        } else if (banyaT == true && hollyT == false && strengthT == false && sootheT == true)
+        {
+            addPotion(4);
+        }
+        else if (banyaT == true && hollyT == false && strengthT == true && sootheT == true)
         {
             addPotion(4);
         }
@@ -147,6 +175,46 @@ public class ingredientScript : MonoBehaviour {
                         Destroy(m_slots[h]);
                     }
                 }
+                break;
+            }
+        }
+    }
+
+    public void addIngredients(int i)
+    {
+        for (int j = 0; j < playerInventory.Length; j++)
+        {
+            if (playerInventory[j].gameObject.transform.childCount == 0 && i == 1)
+            {
+                Transform panel = playerInventory[j].transform;
+
+                GameObject a = (GameObject)Instantiate(soothe);
+                a.name = a.name.Replace("(Clone)", "");
+                a.transform.SetParent(panel.transform, false);
+
+                Transform panel2 = playerInventory[j + 1].transform;
+
+                GameObject b = (GameObject)Instantiate(strength);
+                b.name = b.name.Replace("(Clone)", "");
+                b.transform.SetParent(panel2.transform, false);
+                break;
+            }
+        }
+        for (int j = 0; j < playerInventory.Length; j++)
+        {
+            if (playerInventory[j].gameObject.transform.childCount == 0 && i == 2)
+            {
+                Transform panel = playerInventory[j].transform;
+
+                GameObject a = (GameObject)Instantiate(banya);
+                a.name = a.name.Replace("(Clone)", "");
+                a.transform.SetParent(panel.transform, false);
+
+                Transform panel2 = playerInventory[j + 1].transform;
+
+                GameObject b = (GameObject)Instantiate(holly);
+                b.name = b.name.Replace("(Clone)", "");
+                b.transform.SetParent(panel2.transform, false);
                 break;
             }
         }

@@ -35,9 +35,9 @@ public class customerScript : MonoBehaviour
 
 
     //max counts for request dialogueState numbers
-    int muu1MaxDS = 4;
-    int muu2MaxDS = 9;
-    int muu3MaxDS = 6;
+    int muu1MaxDS = 6;
+    int muu2MaxDS = 6;
+    int muu3MaxDS = 7;
 
     // Use this for initialization
     void Start()
@@ -61,98 +61,98 @@ public class customerScript : MonoBehaviour
         {
             if (dialogState == 0)
             {
-                dialogString = "<b>Muuya:</b> Hallo Mr Apothecary. Would you happen to have anything to soothe my aching muscles? My arms are so tired they’re trembling as I speak.";
+                dialogString = "<b>Apothecary:</b> Why hello there. ";
             }
             else if (dialogState == 1)
             {
-                dialogString = "<b>Apothecary:</b> That must be tough. What was someone as young as you working so hard on?";
+                dialogString = "<b>Muuya:</b> Hallo....uhm, you're an apothecary right? I heard your many incredible stories, well, from the South. I’m Muuya.";
             }
             else if (dialogState == 2)
             {
-                dialogString = "<b>Muuya:</b> Ah, well… I was helping my... grandmother massage her shoulders, and I was at it long enough for my arms to turn to noodles. Hehe.";
+                dialogString = "<b>Apothecary:</b> Indeed. I hope to live up to these stories. What brings you in young Muuya?";
             }
             else if (dialogState == 3)
             {
-                dialogString = "<b>Muuya:</b> Actually, if it’s not too much to ask, maybe also something to muster my strength. It seems I may go help her tomorrow as well.";
+                dialogString = "<b>Muuya:</b> It's my ma and pa. They've been working so hard on this intricately beautiful wood carving. They've really drained themselves, with all that spellweaving involved. I thought I'd get them something rejuvenating.";
+            }
+            else if (dialogState == 4)
+            {
+                dialogString = "<b>Muuya:</b> I usually make it something myself, but thought I'd come meet you. Just something basic would be okay. If I remember correctly, something <b>torched</b> and something  <b>ethereal</b> were the ingredients I used.";
+            }
+            else if (dialogState == 5)
+            {
+                dialogString = "<b>Apothecary:</b>Sounds like we have an apothecary in the making right here. You know a lot for someone so young. I'll be back with your potion.";
             }
         }
         else if (charaState == 2)
         {
-            dialogString = "<b>Muuya:</b> Thank you. I don’t have much as payment, but I found some beautiful holly berries on my way back, the most beautiful I’ve ever seen!";
+            dialogString = "<b>Muuya:</b> Thank you. I don’t have much as to give but my heartfelt thanks!";
         }
         else if (charaState == 3) // Muuya request 2
         {
             if (dialogState == 0)
             {
-                dialogString = "<b>Muuya:</b> Hallo Mr Apothecary, I’m back again. What you gave me yesterday did wonders, but I’m still weak and my arms are all shivery again.";
+                dialogString = "<b>Apothecary:</b> Greetings..";
             }
             else if (dialogState == 1)
             {
-                dialogString = "<b>Apothecary:</b> At your grandmother’s again? Your steps also seem a bit wobbly. Are you feeling alright?";
+                dialogString = "<b>Familiars:</b> To you we say hello. We are the familiars of the witch of the woods, known as Yagi.";
             }
             else if (dialogState == 2)
             {
-                dialogString = "<b>Muuya:</b> That… was because she had a headache today as well, so I lighted some incense for her. Maybe it’s making me a little dizzy… The woods seemed a little more purple than usual…";
+                dialogString = "<b>Apothecary:</b> I've heard of the witch. She is a controversial figure, to say the least. What do you ask of me?";
             }
             else if (dialogState == 3)
             {
-                dialogString = "<b>Apothecary:</b> Dear child, do you remember what kind of incense it was?";
+                dialogString = "<b>Familiars:</b> She has been treated poorly by far too many for far too long. She has treated us very well in the past, and we do the same with her now. We have travelled for years to find a place to stay that is welcoming, but we have little hope. ";
             }
             else if (dialogState == 4)
             {
-                dialogString = "<b>Muuya:</b> Hmmm, it was nothing I had ever smelled before, but it definitely smelled a bit like pine, though a little more smokey…";
+                dialogString = "<b>Familiars:</b> And now, we simply need something to boost our energy and soothe our aching bodies. Something <b>warm</b>, to gives us some <b>serenity</b> during this continued journey.";
             }
             else if (dialogState == 5)
             {
-                dialogString = "<b>Muuya:</b> Ah, I still have some sticks in my pocket! I must have forgotten to put it back. I suppose you might like them, Mr Apothecary?";
-            }
-            else if (dialogState == 6)
-            {
-                dialogString = "<b>Apothecary:</b> Hmmm, these seem to be Spirit Incense; they're extremely strong for humans. Where exactly did you get them, again?";
-            }
-            else if (dialogState == 7)
-            {
-                dialogString = "<b>Muuya:</b> Ahh...... Uhmm...... I'm sorry Mr Apothecary, I lied. I actually went to see the Witch of the Woods... I had a request of sorts....";
-            }
-            else if (dialogState == 8)
-            {
-                dialogString = "<b>Apothecary:</b> I see.... Then I can take these as payment. Just wait a moment and I’ll get something for you.";
+                dialogString = "<b>Apothecary:</b> Well, you're welcome in my apothecary. I will make you just what you need.";
             }
         }
         else if (charaState == 4)
         {
-            dialogString = "<b>Muuya:</b> Thank you again!Ummm, I also picked some banya pine; it's hard to come by around the village, and this was the greenest I could find!";
+            dialogString = "<b>Familiars:</b> Thank you kindly";
         }
         else if (charaState == 5) //request num 3
         {
             if (dialogState == 0)
             {
-                dialogString = "<b>Raspu:</b> Good afternoon, Apothecary. We are the familiars of our Mistress Yagi, the Witch of the Woods. I am Raspu, the Dog of Clouds.";
+                dialogString = "<b>Muuya:</b> Hallo again! Boy, I’ve had quite the day.";
             }
             else if (dialogState == 1)
             {
-                dialogString = "<b>Raspu:</b> My kitty friend, Itsa, and I have been touched by little Muuya’s kindness, bringing us treats and warm words.";
+                dialogString = "<b>Apothecary:</b>Hello Muuya, what’s happened?";
             }
             else if (dialogState == 2)
             {
-                dialogString = "<b>Itsa:</b> Our own Mistress has spoken nothing but insults. Of course, she hasn’t always been like this... Being far from one’s homeland for too long does strange things.";
+                dialogString = "<b>Muuya:</b> Well, I was in the Willwood Forest when I saw a few travellers, clearly not from around here. I just had to meet them. Turns out one of them is actually a witch!";
             }
             else if (dialogState == 3)
             {
-                dialogString = "<b>Itsa:</b> Our Mistress isn't well, with aches and headaches all over! Even Muuya's kindness isn't of much help.";
+                dialogString = "<b>Apothecary:</b> A witch, eh. I think I might know of these travelers.";
             }
             else if (dialogState == 4)
             {
-                dialogString = "<b>Raspu:</b> You see, we’re from a land of hot springs, but being in this Far North with want of warmth has frozen many things both within and without.";
+                dialogString = "<b>Muuya:</b> Oh? They were really exhausted, nearly falling over. Doesn’t help that there was that big snow storm - strongest one I’ve felt in a while. I had to help them. I ended up massaging the old witch for what felt like *hours*. ";
             }
             else if (dialogState == 5)
             {
-                dialogString = "<b>Apothecary:</b> Ah, perhaps something <b>hot</b> and <b>relaxing</b> would help Mistress Yagi?";
+                dialogString = "<b>Muuya:</b> Now I'm exhausted. I had to come back - and my parents love the potion you made. Could I have something warm -- it’s so cold out! And sweet too";
+            }
+            else if (dialogState == 6)
+            {
+                dialogString = "<b>Apothecary:</b> Well, my potions shouldn’t be confused with candy -- but I’ll see what I can do for ya.";
             }
         }
         else if (charaState == 6)
         {
-            dialogString = "<b>Familiar:</b> Thank you, hopefully this will help her if even for a little while.";
+            dialogString = "<b>Muuya:</b> I'm feeling refreshed! Thanks again!";
         }
     }
        
@@ -166,12 +166,12 @@ public class customerScript : MonoBehaviour
                 Destroy(requestSlot.transform.GetChild(0).gameObject);
                 charaState++;
                 dialogState = 0; // reset dialogue to start from beginning
-                charGiveItems();
+                //charGiveItems();
             }
         }
     }
 
-    public void charGiveItems()
+   /* public void charGiveItems()
     {
         if (charaState == 2)
         {
@@ -194,7 +194,7 @@ public class customerScript : MonoBehaviour
             }
         }
 
-    }
+    }*/
 
     public void moveForward()
     {
@@ -240,8 +240,8 @@ public class customerScript : MonoBehaviour
         }
         else if (charaState == 5)
         {
-            request = banyaPotion;
-            sprite.GetComponent<Image>().sprite = chara2;
+            request = potionA;
+            sprite.GetComponent<Image>().sprite = chara1;
         }
     }
 }

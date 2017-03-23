@@ -4,7 +4,6 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - merchantMode
   - player
   - mainMenuMode
   - introduction
@@ -22,7 +21,12 @@ TagManager:
   - ingredient
   - requestSlot
   - peoplePage
-  - merchantInventory
+  - scavengeMode
+  - UI
+  - tomeTags
+  - area1
+  - area2
+  - action
   layers:
   - Default
   - TransparentFX
