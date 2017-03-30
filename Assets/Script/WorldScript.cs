@@ -83,20 +83,18 @@ public class WorldScript : MonoBehaviour {
         {
             menuState = MenuState.scavengeMode;
             player.togglePlayer();
+            player.closeEndModal();
         }
 
     }
 
     public void endDay()
     {
-        changeState();
         player.day++;
         if (customer.charaState %2 == 0)
         {
             customer.charaState++;
             customer.setChara();
-            player.money += 50;
-            player.reputation += 10;
         }
     }
 }

@@ -27,6 +27,10 @@ TagManager:
   - area1
   - area2
   - action
+  - modal
+  - endModal
+  - dayText
+  - mixingInventory2
   layers:
   - Default
   - TransparentFX

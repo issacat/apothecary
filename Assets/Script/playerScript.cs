@@ -5,8 +5,7 @@ using UnityEngine.UI;
 
 public class playerScript : MonoBehaviour {
     //resources the player has
-    public int money = 500;
-    public int reputation = 50;
+    public int gratitude = 0;
     public int day = 1;
 
     //controls and book are visible
@@ -22,10 +21,15 @@ public class playerScript : MonoBehaviour {
     public GameObject[] UI;
 
     //text for UI
-    public Text repText;
-    public Text dayText;
+    public GameObject[] dayText;
 
     public GameObject[] tags;
+
+    //modal objects
+    public GameObject modal;
+    public GameObject endModal;
+
+    public GameObject gratText;
 
     // Use this for initialization
     void Start () {
@@ -47,12 +51,23 @@ public class playerScript : MonoBehaviour {
         {
             tags[i].SetActive(false);
         }
+
+        modal = GameObject.FindGameObjectWithTag("modal");
+        modal.SetActive(false);
+
+        endModal = GameObject.FindGameObjectWithTag("endModal");
+        endModal.SetActive(false);
     }
 	
 	// Update is called once per frame
 	void Update () {
-        repText.text = "Rep: " + reputation.ToString() + "/100";
-        dayText.text = "Day: " + day.ToString();
+        dayText = GameObject.FindGameObjectsWithTag("dayText");
+        for (int i = 0; i < dayText.Length; i++)
+        {
+            dayText[i].GetComponent<Text>().text = "Day: " + day.ToString(); ; 
+        }
+        gratText = GameObject.Find("gratitudeText");
+        gratText.GetComponent<Text>().text ="Gratitude: " + gratitude.ToString();
     }
 
     public void toggleItem()
@@ -125,5 +140,30 @@ public class playerScript : MonoBehaviour {
         {
             tags[i].SetActive(true);
         }
+    }
+
+    public void modalPopUp(string s, Sprite img)
+    {
+        modal.SetActive(true);
+        Text text = modal.GetComponentInChildren<Text>();
+        text.text = s;
+
+        SpriteRenderer spr = modal.GetComponentInChildren<SpriteRenderer>();
+        spr.sprite = img;
+    }
+
+    public void closeModal()
+    {
+        modal.SetActive(false);
+    }
+
+    public void endModalPopUp()
+    {
+        endModal.SetActive(true);
+    }
+
+    public void closeEndModal()
+    {
+        endModal.SetActive(false);
     }
 }

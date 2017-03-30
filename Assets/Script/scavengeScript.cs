@@ -16,7 +16,7 @@ public class scavengeScript : MonoBehaviour {
 
         actionPoints = GameObject.FindGameObjectsWithTag("action");
     }
-	
+
 	// Update is called once per frame
 	void Update () {
         for (int i = 0; i < actionPoints.Length; i++)
@@ -39,26 +39,27 @@ public class scavengeScript : MonoBehaviour {
 
     public void endScavenge()
     {
-        if (actions == 3)
+        if (actions <= 3)
         {
             world.changeState();
-        }
-        else world.endDay();
-    }
-
-    public void continueScavenge()
-    {
-            world.player.day++;
+            world.endDay();
             actions = 3;
+        }
     }
 
     public void scavengeArea1()
     {
-        ing.addIngredients(1);
+        if (actions >= 0)
+        {
+            ing.addIngredients(1);
+        }
     }
 
     public void scavengeArea2()
     {
-        ing.addIngredients(2);
+        if (actions >= 0)
+        {
+            ing.addIngredients(2);
+        }
     }
 }

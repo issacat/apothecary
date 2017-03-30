@@ -7,7 +7,14 @@ public class ingredientAttribute : MonoBehaviour {
     public string attribute;
     public string description;
     public Sprite img;
-    public ArrayList notMix;
+
+    public ingredientAttribute(string i, string a, string d, Sprite s)
+    {
+        ingredientName = i;
+        attribute = a;
+        description = d;
+        img = s;
+    }
 
 	// Use this for initialization
 	void Start () {
