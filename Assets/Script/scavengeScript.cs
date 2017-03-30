@@ -62,4 +62,25 @@ public class scavengeScript : MonoBehaviour {
             ing.addIngredients(2);
         }
     }
+    public void scavengeArea3()
+    {
+        if (actions >= 0)
+        {
+            ing.addIngredients(3);
+        }
+    }
+    public void scavengeArea4()
+    {
+        if (actions >= 0)
+        {
+            ing.addIngredients(4);
+        }
+    }
+    public void scavengeArea5()
+    {
+        if (actions >= 0)
+        {
+            ing.addIngredients(5);
+        }
+    }
 }

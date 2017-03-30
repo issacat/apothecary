@@ -45,7 +45,6 @@ public class ingredientScript : MonoBehaviour {
     public potionAttribute pot6;
     public potionAttribute pot7;
     public potionAttribute pot8;
-    public Dictionary<string, potionAttribute> potions;
 
     public potionAttribute spot1;
     public potionAttribute spot2;
@@ -56,18 +55,16 @@ public class ingredientScript : MonoBehaviour {
     public potionAttribute spot7;
     public potionAttribute spot8;
     public potionAttribute spot9;
-    public Dictionary<string, potionAttribute> specialPotions;
+    public Dictionary<string, potionAttribute> potions;
 
     // Use this for initialization
     void Start () {
-         defaultIngredient = (GameObject)Instantiate(Resources.Load("Ingredient"));
+        defaultIngredient = (GameObject)(Resources.Load("Ingredient"));
         recipePages = GameObject.FindGameObjectWithTag("recipePage");
         ingredientPages = GameObject.FindGameObjectWithTag("ingredientPage");
-        addRecipePage();
-        addIngredientPage("Midnight Fern");
 
          mixingInventory = GameObject.FindGameObjectsWithTag("mixingInventory");
-         mixingInventory2 = GameObject.FindGameObjectsWithTag("mixingInventory");
+         mixingInventory2 = GameObject.FindGameObjectsWithTag("mixingInventory2");
          playerInventory = GameObject.FindGameObjectsWithTag("playerInventory");
          m_slots = new GameObject[mixingInventory.Length];
          m_slots2 = new GameObject[mixingInventory.Length];
@@ -135,19 +132,6 @@ public class ingredientScript : MonoBehaviour {
         pot6 = new potionAttribute("Potion of Protection", "Immunity", "A bitter, fizzy potion often used by military and those seeking the protection of the Gods.", Resources.Load<Sprite>("potion_of_protection"));
         pot7 = new potionAttribute("Silver Water", "Awakening", "This freezing cold liquid seems to sparkle like moonlight even where no light shines, and is said to connect to the hidden landscapes of the unconscious.", Resources.Load<Sprite>("silver_water"));
         pot8 = new potionAttribute("Decoction of Clarity", "Peace", "A harsh shot used to stir the mind. This decoction is created by extracting the essences of the ingredients to create a dense brew.", Resources.Load<Sprite>("decoction_of_clarity"));
-
-        potions = new Dictionary<string, potionAttribute>()
-        {
-            {"Brew of Blessing", pot1},
-            {"Potion of Healing", pot2},
-            {"Animalcule", pot3},
-            {"Elixir of Dreams", pot4},
-            {"Perfume of Allure", pot5},
-            {"Potion of Protection", pot6},
-            {"Silver Water", pot7},
-            {"Decoction of Clarity", pot8}
-        };
-
         /* 
         SPECIAL POTIONS 
         POT + ING
@@ -170,9 +154,16 @@ public class ingredientScript : MonoBehaviour {
             Resources.Load<Sprite>("dream_catcher"));
         spot9 = new potionAttribute("Steaming Elixir", "Awakening", "A powerful, hot brew. It's contents will shock the tongue of the consumer, waking them from even the deepest of sleeps.",
             Resources.Load<Sprite>("steaming_elixir"));
-
-        specialPotions = new Dictionary<string, potionAttribute>()
+        potions = new Dictionary<string, potionAttribute>()
         {
+            {"Brew of Blessing", pot1},
+            {"Potion of Healing", pot2},
+            {"Animalcule", pot3},
+            {"Elixir of Dreams", pot4},
+            {"Perfume of Allure", pot5},
+            {"Potion of Protection", pot6},
+            {"Silver Water", pot7},
+            {"Decoction of Clarity", pot8},
             {"Balm of Realization", spot1},
             {"Nightmare Crystal", spot2},
             {"Midnight Moonlight", spot3},
@@ -369,6 +360,20 @@ public class ingredientScript : MonoBehaviour {
                         Destroy(m_slots[h]);
                     }
                 }
+                bool added = false;
+                for (int k = 0; k < recipePages.transform.childCount; k++)
+                {
+                    if (recipePages.transform.GetChild(k).transform.FindChild("title").GetComponent<Text>().text != s)
+                    {
+                        added = false;
+                    }
+                    else
+                    {
+                        added = true;
+                        k = recipePages.transform.childCount - 1;
+                    }
+                }
+                if (!added) addRecipePage(s);
                 break;
             }    
         }
@@ -376,7 +381,7 @@ public class ingredientScript : MonoBehaviour {
 
     public void addIngredients(int i)
     {
-        for (int j = 0; j < playerInventory.Length-1; j++)
+        for (int j = 0; j < playerInventory.Length - 1; j++)
         {
             if (playerInventory[j].gameObject.transform.childCount == 0 && i == 1)
             {
@@ -389,29 +394,122 @@ public class ingredientScript : MonoBehaviour {
                 a.name = test.ingredientName;
                 a.transform.SetParent(panel.transform, false);
 
+                bool added1 = false;
+                for (int k = 0; k < ingredientPages.transform.childCount; k++)
+                {
+                    if (ingredientPages.transform.GetChild(k).transform.FindChild("title").GetComponent<Text>().text != ("Torched Perunika"))
+                    {
+                        added1 = false;
+                    }
+                    else
+                    {
+                        added1 = true;
+                        k = ingredientPages.transform.childCount - 1;
+                    }
+                }
+                if (!added1) addIngredientPage("Torched Perunika");
+
                 Transform panel2 = playerInventory[j + 1].transform;
-                
+
                 GameObject b = Instantiate(defaultIngredient);
                 ingredientAttribute test2 = b.AddComponent<ingredientAttribute>();
                 test2 = ingredients["Ethereal Billberry"];
                 b.GetComponent<UnityEngine.UI.Image>().sprite = test2.img;
                 b.name = test2.ingredientName;
                 b.transform.SetParent(panel2.transform, false);
+
+                bool added2 = false;
+                for (int k = 0; k < ingredientPages.transform.childCount; k++)
+                {
+                    if (ingredientPages.transform.GetChild(k).transform.FindChild("title").GetComponent<Text>().text != ("Ethereal Billberry"))
+                    {
+                        added2 = false;
+                    }
+                    else
+                    {
+                        added2 = true;
+                        k = ingredientPages.transform.childCount - 1;
+                    }
+                }
+                if (!added2) addIngredientPage("Ethereal Billberry");
                 break;
             }
-        }
-        for (int j = 0; j < playerInventory.Length; j++)
-        {
-            if (playerInventory[j].gameObject.transform.childCount == 0 && i == 2)
+            else if (playerInventory[j].gameObject.transform.childCount == 0 && i == 2)
             {
                 Transform panel = playerInventory[j].transform;
 
                 GameObject a = Instantiate(defaultIngredient);
                 ingredientAttribute test = a.AddComponent<ingredientAttribute>();
-                test = ingredients["Midnight Fern"];
+                test = ingredients["Dwarf Billberry"];
                 a.GetComponent<UnityEngine.UI.Image>().sprite = test.img;
                 a.name = test.ingredientName;
                 a.transform.SetParent(panel.transform, false);
+
+                bool added1 = false;
+                for (int k = 0; k < ingredientPages.transform.childCount; k++)
+                {
+                    if (ingredientPages.transform.GetChild(k).transform.FindChild("title").GetComponent<Text>().text != ("Dwarf Billberry"))
+                    {
+                        added1 = false;
+                    }
+                    else
+                    {
+                        added1 = true;
+                        k = ingredientPages.transform.childCount - 1;
+                    }
+                }
+                if (!added1) addIngredientPage("Dwarf Billberry");
+
+                Transform panel2 = playerInventory[j + 1].transform;
+
+                GameObject b = Instantiate(defaultIngredient);
+                ingredientAttribute test2 = b.AddComponent<ingredientAttribute>();
+                test2 = ingredients["Blooming Fern"];
+                b.GetComponent<UnityEngine.UI.Image>().sprite = test2.img;
+                b.name = test2.ingredientName;
+                b.transform.SetParent(panel2.transform, false);
+
+                bool added2 = false;
+                for (int k = 0; k < ingredientPages.transform.childCount; k++)
+                {
+                    if (ingredientPages.transform.GetChild(k).transform.FindChild("title").GetComponent<Text>().text != ("Blooming Fern"))
+                    {
+                        added2 = false;
+                    }
+                    else
+                    {
+                        added2 = true;
+                        k = ingredientPages.transform.childCount - 1;
+                    }
+                }
+                if (!added2) addIngredientPage("Blooming Fern");
+                break;
+            }
+            else if (playerInventory[j].gameObject.transform.childCount == 0 && i == 3)
+            {
+                Transform panel = playerInventory[j].transform;
+
+                GameObject a = Instantiate(defaultIngredient);
+                ingredientAttribute test = a.AddComponent<ingredientAttribute>();
+                test = ingredients["Bog Billberry"];
+                a.GetComponent<UnityEngine.UI.Image>().sprite = test.img;
+                a.name = test.ingredientName;
+                a.transform.SetParent(panel.transform, false);
+
+                bool added1 = false;
+                for (int k = 0; k < ingredientPages.transform.childCount; k++)
+                {
+                    if (ingredientPages.transform.GetChild(k).transform.FindChild("title").GetComponent<Text>().text != ("Bog Billberry"))
+                    {
+                        added1 = false;
+                    }
+                    else
+                    {
+                        added1 = true;
+                        k = ingredientPages.transform.childCount - 1;
+                    }
+                }
+                if (!added1) addIngredientPage("Bog Billberry");
 
                 Transform panel2 = playerInventory[j + 1].transform;
 
@@ -421,30 +519,181 @@ public class ingredientScript : MonoBehaviour {
                 b.GetComponent<UnityEngine.UI.Image>().sprite = test2.img;
                 b.name = test2.ingredientName;
                 b.transform.SetParent(panel2.transform, false);
+
+                bool added2 = false;
+                for (int k = 0; k < ingredientPages.transform.childCount; k++)
+                {
+                    if (ingredientPages.transform.GetChild(k).transform.FindChild("title").GetComponent<Text>().text != ("Violet Perunika"))
+                    {
+                        added2 = false;
+                    }
+                    else
+                    {
+                        added2 = true;
+                        k = ingredientPages.transform.childCount - 1;
+                    }
+                }
+                if (!added2) addIngredientPage("Violet Perunika");
+                break;
+            }
+            else if (playerInventory[j].gameObject.transform.childCount == 0 && i == 4)
+            {
+                Transform panel = playerInventory[j].transform;
+
+                GameObject a = Instantiate(defaultIngredient);
+                ingredientAttribute test = a.AddComponent<ingredientAttribute>();
+                test = ingredients["Divine Perunika"];
+                a.GetComponent<UnityEngine.UI.Image>().sprite = test.img;
+                a.name = test.ingredientName;
+                a.transform.SetParent(panel.transform, false);
+
+                bool added1 = false;
+                for (int k = 0; k < ingredientPages.transform.childCount; k++)
+                {
+                    if (ingredientPages.transform.GetChild(k).transform.FindChild("title").GetComponent<Text>().text != ("Divine Perunika"))
+                    {
+                        added1 = false;
+                    }
+                    else
+                    {
+                        added1 = true;
+                        k = ingredientPages.transform.childCount - 1;
+                    }
+                }
+                if (!added1) addIngredientPage("Divine Perunika");
+
+                Transform panel2 = playerInventory[j + 1].transform;
+
+                GameObject b = Instantiate(defaultIngredient);
+                ingredientAttribute test2 = b.AddComponent<ingredientAttribute>();
+                test2 = ingredients["Midnight Fern"];
+                b.GetComponent<UnityEngine.UI.Image>().sprite = test2.img;
+                b.name = test2.ingredientName;
+                b.transform.SetParent(panel2.transform, false);
+
+                bool added2 = false;
+                for (int k = 0; k < ingredientPages.transform.childCount; k++)
+                {
+                    if (ingredientPages.transform.GetChild(k).transform.FindChild("title").GetComponent<Text>().text != ("Midnight Fern"))
+                    {
+                        added2 = false;
+                    }
+                    else
+                    {
+                        added2 = true;
+                        k = ingredientPages.transform.childCount - 1;
+                    }
+                }
+                if (!added2) addIngredientPage("Midnight Fern");
+                break;
+            }
+            else if (playerInventory[j].gameObject.transform.childCount == 0 && i == 4)
+            {
+                Transform panel = playerInventory[j].transform;
+
+                GameObject a = Instantiate(defaultIngredient);
+                ingredientAttribute test = a.AddComponent<ingredientAttribute>();
+                test = ingredients["Tormented Fern"];
+                a.GetComponent<UnityEngine.UI.Image>().sprite = test.img;
+                a.name = test.ingredientName;
+                a.transform.SetParent(panel.transform, false);
+
+                bool added1 = false;
+                for (int k = 0; k < ingredientPages.transform.childCount; k++)
+                {
+                    if (ingredientPages.transform.GetChild(k).transform.FindChild("title").GetComponent<Text>().text != ("Tormented Fern"))
+                    {
+                        added1 = false;
+                    }
+                    else
+                    {
+                        added1 = true;
+                        k = ingredientPages.transform.childCount - 1;
+                    }
+                }
+                if (!added1) addIngredientPage("Tormented Fern");
+
+                Transform panel2 = playerInventory[j + 1].transform;
+
+                GameObject b = Instantiate(defaultIngredient);
+                ingredientAttribute test2 = b.AddComponent<ingredientAttribute>();
+                test2 = ingredients["Midnight Fern"];
+                b.GetComponent<UnityEngine.UI.Image>().sprite = test2.img;
+                b.name = test2.ingredientName;
+                b.transform.SetParent(panel2.transform, false);
+
+                bool added2 = false;
+                for (int k = 0; k < ingredientPages.transform.childCount; k++)
+                {
+                    if (ingredientPages.transform.GetChild(k).transform.FindChild("title").GetComponent<Text>().text != ("Midnight Fern"))
+                    {
+                        added2 = false;
+                    }
+                    else
+                    {
+                        added2 = true;
+                        k = ingredientPages.transform.childCount - 1;
+                    }
+                }
+                if (!added2) addIngredientPage("Midnight Fern");
                 break;
             }
         }
     }
 
-    public void addRecipePage()
+    public void addRecipePage(string s)
     {
-        Transform panel = recipePages.transform;
+        if (recipePages.transform.childCount % 2 == 0)
+        {
+            Transform panel = recipePages.transform;
 
-        GameObject a = (GameObject)Instantiate(Resources.Load("recipe - left"));
-        a.transform.SetParent(panel.transform, false);
+            GameObject a = (GameObject)Instantiate(Resources.Load("recipe - left"));
+            a.transform.Find("ingredient picture").GetComponent<Image>().sprite = potions[s].img;
+            a.transform.Find("title").GetComponent<Text>().text = potions[s].ingredientName;
+            a.transform.Find("description").GetComponent<Text>().text = potions[s].description;
+            a.transform.Find("attributes").GetComponent<Text>().text = potions[s].attribute;
+            a.SetActive(false);
+            a.transform.SetParent(panel, false);
+        }
+        else
+        {
+            Transform panel = recipePages.transform;
 
-        GameObject b = (GameObject)Instantiate(Resources.Load("recipe - right"));
-        b.transform.SetParent(panel.transform, false);
+            GameObject a = (GameObject)Instantiate(Resources.Load("recipe - right"));
+            a.transform.Find("ingredient picture").GetComponent<Image>().sprite = potions[s].img;
+            a.transform.Find("title").GetComponent<Text>().text = potions[s].ingredientName;
+            a.transform.Find("description").GetComponent<Text>().text = potions[s].description;
+            a.transform.Find("attributes").GetComponent<Text>().text = potions[s].attribute;
+            a.SetActive(false);
+            a.transform.SetParent(panel.transform, false);
+        }
     }
 
     public void addIngredientPage(string s)
     {
-        Transform panel = ingredientPages.transform;
+        if (ingredientPages.transform.childCount % 2 == 0)
+        {
+            Transform panel = ingredientPages.transform;
 
-        GameObject a = (GameObject)Instantiate(Resources.Load("recipe - left"));
-        a.transform.Find("ingredient picture").GetComponent<Image>().sprite = ingredients[s].img;
-        a.SetActive(false);
-        a.transform.SetParent(panel.transform, false);
+            GameObject a = (GameObject)Instantiate(Resources.Load("recipe - left"));
+            a.transform.Find("ingredient picture").GetComponent<Image>().sprite = ingredients[s].img;
+            a.transform.Find("title").GetComponent<Text>().text = ingredients[s].ingredientName;
+            a.transform.Find("description").GetComponent<Text>().text = ingredients[s].description;
+            a.transform.Find("attributes").GetComponent<Text>().text = ingredients[s].attribute;
+            a.SetActive(false);
+            a.transform.SetParent(panel.transform, false);
+        }else
+        {
+            Transform panel = ingredientPages.transform;
+
+            GameObject a = (GameObject)Instantiate(Resources.Load("recipe - right"));
+            a.transform.Find("ingredient picture").GetComponent<Image>().sprite = ingredients[s].img;
+            a.transform.Find("title").GetComponent<Text>().text = ingredients[s].ingredientName;
+            a.transform.Find("description").GetComponent<Text>().text = ingredients[s].description;
+            a.transform.Find("attributes").GetComponent<Text>().text = ingredients[s].attribute;
+            a.SetActive(false);
+            a.transform.SetParent(panel.transform, false);
+        }
     }
 
 }

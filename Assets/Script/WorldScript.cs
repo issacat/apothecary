@@ -20,7 +20,6 @@ public class WorldScript : MonoBehaviour {
 
     public playerScript player;
     public customerScript customer;
-    public merchantScript merchant;
 
     void Awake()
     {

@@ -48,10 +48,9 @@ public class customerScript : MonoBehaviour
         player = GameObject.Find("player sprite").GetComponent<playerScript>();
 
         list = GameObject.FindGameObjectWithTag("prepArea").GetComponent<ingredientScript>();
-
-        charaState = 1;
         list.setupDictionary();
         request = list.potions["Potion of Healing"];
+        charaState = 1;
 
         place = 0;
         dia = new List<string>();
