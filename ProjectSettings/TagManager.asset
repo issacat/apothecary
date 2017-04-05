@@ -24,13 +24,17 @@ TagManager:
   - scavengeMode
   - UI
   - tomeTags
-  - area1
-  - area2
   - action
   - modal
   - endModal
   - dayText
   - mixingInventory2
+  - trash
+  - potion
+  - stars
+  - placePage
+  - menuPage
+  - area
   layers:
   - Default
   - TransparentFX
