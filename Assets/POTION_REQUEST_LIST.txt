@@ -1,0 +1,68 @@
+TIERS
+// good - 1
+// great - 3
+// fantastic - 5
+
+
+
+Duggy sees the hot spring spirit, and lets peeps know
+where they live, and thus inadvertently saves the witch
+
+
+1 (great and fantastic)
+{Potion of Healing} 
+{Potion of Healing} {rejuvenating}
+
+> lower boreal forest opens up on map (leaf symbol)
+
+
+2
+{Decoction of Clarity}
+{Decoction of Clarity} {peace}
+
+
+3
+{Brew of Blessing}
+{Brew of Blessing} {blessing}
+
+> swamp opens up on map
+
+
+4
+{Perfume of Allure}
+{Perfume of Allure} {seduction}
+{Eternal Love}
+
+
+5
+{Animalcule}
+{Animalcule} {companionship}
+{Brownie Butler}
+
+> mountains open up
+
+
+6
+{Elixir of Dreams}
+{Elixir of Dreams} {dreams}
+{Nightmare Crystal}
+
+> aurora borealis opens up
+
+
+7
+{Potion of Protection}
+{Potion of Protection} {blessing}
+{Goddess' Protection}
+
+
+8
+{Silver Water}
+{Silver Water} {awakening}
+{Steaming Elixir}
+
+
+9
+{Decoction of Clarity}
+{Decoction of Clarity} {clarity}
+{Balm of Realization}

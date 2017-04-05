@@ -36,7 +36,7 @@ public class HoverScript : MonoBehaviour {
 
     void OnMouseEnter()
     {
-        if (gameObject.tag == "ingredient")
+        if (gameObject.tag == "ingredient" || gameObject.tag == "potion")
         {
             Cursor.SetCursor(hoverItemTexture, hotSpotCustom, CursorMode.ForceSoftware);
         }

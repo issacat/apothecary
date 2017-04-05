@@ -8,11 +8,19 @@ public class ingredientNameGUI : MonoBehaviour {
     public GameObject _ingredient;
 
     public Text ingName;
+    public Text ingAtt;
+
+    public ingredientScript ingScript;
 
     // Use this for initialization
     void Start () {
         ingName = GameObject.Find("ingredientName").GetComponent<Text>();
         ingName.text = "inventory";
+
+        ingAtt = GameObject.Find("ingredientAttribute").GetComponent<Text>();
+        ingAtt.text = " ";
+
+        ingScript = GameObject.Find("preparationArea").GetComponent<ingredientScript>();
     }
 	
 	// Update is called once per frame
@@ -26,6 +34,12 @@ public class ingredientNameGUI : MonoBehaviour {
         {
             _ingredient = gameObject;
             ingName.text = _ingredient.name;
+            ingAtt.text = ingScript.ingredients[_ingredient.name].attribute;
+        } else if (gameObject.tag == "potion")
+        {
+            _ingredient = gameObject;
+            ingName.text = _ingredient.name;
+            ingAtt.text = _ingredient.GetComponent<potionAttribute>().attribute;
         }
         else
         {
@@ -43,5 +57,6 @@ public class ingredientNameGUI : MonoBehaviour {
     void OnMouseExit()
     {
         ingName.text = "inventory";
+        ingAtt.text = " ";
     }
 }

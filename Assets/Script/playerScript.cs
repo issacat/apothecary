@@ -22,14 +22,23 @@ public class playerScript : MonoBehaviour {
 
     //text for UI
     public GameObject[] dayText;
-
+    public GameObject gratText;
     public GameObject[] tags;
 
     //modal objects
     public GameObject modal;
     public GameObject endModal;
 
-    public GameObject gratText;
+    //trash
+    public GameObject[] t_slot;
+
+    //animation apothecary
+    public Animator anim;
+    public GameObject bookButton;
+    public GameObject apothecary;
+
+    public AudioSource sounds;
+    public AudioSource trashSound;
 
     // Use this for initialization
     void Start () {
@@ -57,6 +66,20 @@ public class playerScript : MonoBehaviour {
 
         endModal = GameObject.FindGameObjectWithTag("endModal");
         endModal.SetActive(false);
+
+        t_slot = GameObject.FindGameObjectsWithTag("trash");
+
+        anim = GameObject.Find("Apothecary").GetComponent<Animator>();
+        apothecary = GameObject.Find("Apothecary");
+        bookButton = GameObject.Find("book button");
+
+        anim.SetBool("bookBool", true);
+        bookButton.GetComponent<Image>().sprite = Resources.Load<Sprite>("char_apothecary_closed_1");
+
+        itemState = 0;
+        item.SetActive(false);
+
+        trashSound = GameObject.Find("trashSound").GetComponent<AudioSource>();
     }
 	
 	// Update is called once per frame
@@ -66,12 +89,15 @@ public class playerScript : MonoBehaviour {
         {
             dayText[i].GetComponent<Text>().text = "Day: " + day.ToString(); ; 
         }
-        gratText = GameObject.Find("gratitudeText");
-        gratText.GetComponent<Text>().text ="Gratitude: " + gratitude.ToString();
+       // gratText = GameObject.Find("gratitudeText");
+       // gratText.GetComponent<Text>().text ="Gratitude: " + gratitude.ToString();
     }
 
     public void toggleItem()
     {
+        sounds = GameObject.Find("UISound").GetComponent<AudioSource>();
+        sounds.clip = Resources.Load<AudioClip>("click");
+        sounds.Play();
         if (itemState == 1)
         {
             itemState = 0;
@@ -86,15 +112,39 @@ public class playerScript : MonoBehaviour {
 
     public void toggleBook()
     {
+        sounds = GameObject.Find("UISound").GetComponent<AudioSource>();
+        sounds.clip = Resources.Load<AudioClip>("turnLeft");
+        sounds.Play();
         if (bookState == 1)
         {
             bookState = 0;
             book.SetActive(false);
+            bookButton.GetComponent<Image>().sprite = Resources.Load<Sprite>("char_apothecary_closed_1");
+            anim.SetBool("bookBool", false);
+            apothecary.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("char_apothecary_closed_1");
         }
         else if (bookState == 0)
         {
             bookState = 1;
             book.SetActive(true);
+            if(book.GetComponent<bookScript>()._currentPage == book.GetComponent<bookScript>()._ingredientPage)
+            {
+                book.GetComponent<bookScript>().ingredientSwitch();
+            }else if (book.GetComponent<bookScript>()._currentPage == book.GetComponent<bookScript>()._recipePage)
+            {
+                book.GetComponent<bookScript>().recipeSwitch();
+            }
+            else if (book.GetComponent<bookScript>()._currentPage == book.GetComponent<bookScript>()._peoplePage)
+            {
+                book.GetComponent<bookScript>().peopleSwitch();
+            }
+            else if (book.GetComponent<bookScript>()._currentPage == book.GetComponent<bookScript>()._placePage)
+            {
+                book.GetComponent<bookScript>().placeSwitch();
+            }
+            bookButton.GetComponent<Image>().sprite = Resources.Load<Sprite>("char_apothecary_open_1");
+            anim.SetBool("bookBool", true);
+            apothecary.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("char_apothecary_open_1");
         }
     }
 
@@ -119,10 +169,6 @@ public class playerScript : MonoBehaviour {
             {
                 UI[i].SetActive(true);
             }
-            bookState = 1;
-            book.SetActive(true);
-            itemState = 1;
-            item.SetActive(true);
         }
     }
 
@@ -142,11 +188,14 @@ public class playerScript : MonoBehaviour {
         }
     }
 
-    public void modalPopUp(string s, Sprite img)
+    public void modalPopUp(string s, string a, Sprite img)
     {
         modal.SetActive(true);
-        Text text = modal.GetComponentInChildren<Text>();
+        Text text = GameObject.Find("modal ingredient").GetComponent<Text>();
         text.text = s;
+
+        Text text2 = GameObject.Find("modal attribute").GetComponent<Text>();
+        text2.text = a;
 
         SpriteRenderer spr = modal.GetComponentInChildren<SpriteRenderer>();
         spr.sprite = img;
@@ -159,11 +208,48 @@ public class playerScript : MonoBehaviour {
 
     public void endModalPopUp()
     {
+        if (endModal.activeSelf)
+        {
+            closeEndModal();
+        }else
+        {
         endModal.SetActive(true);
+
+        }
+        sounds.clip = Resources.Load<AudioClip>("click");
+        sounds.Play();
     }
 
     public void closeEndModal()
     {
         endModal.SetActive(false);
+        sounds.clip = Resources.Load<AudioClip>("click");
+        sounds.Play();
+    }
+
+    public void nextDay()
+    {
+        endModal.SetActive(false);
+        itemState = 0;
+        item.SetActive(false);
+        bookState = 0;
+        book.SetActive(false);
+    }
+
+    public void trash()
+    {
+        trashSound.Play();
+        for (int i = 0; i < t_slot.Length; i++)
+        {
+            if (t_slot[i].transform.childCount != 0)
+            {
+                Destroy(t_slot[i].transform.GetChild(0).gameObject);
+            }
+        }  
+    }
+
+    public void closeGame()
+    {
+        Application.Quit();
     }
 }

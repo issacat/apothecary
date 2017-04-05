@@ -1,0 +1,261 @@
+Apothecary >> Sarvvi
+
+TIERS
+// good - 1 - <=17
+// great - 3 - >=17 <=28
+// fantastic - 5 >=28
+
+
+charstate
+	1 //////////////////// REQUEST ONE
+
+Muuya: Hullo Mister Sarvvis! You're still a reindeer, I see. I'm starting to like it.
+
+Sarvvis: Hello Muuya. The whole look is growing on me, too. Makes a great conversational topic. 
+
+Sarvvis: Anyways, what trouble did you get in to today? The snow storm finally calmed so I'm sure you were out and about.
+
+Muuya: Not trouble - adventures! The crossbills were twittering about foreigners arriving with the storm, so I asked them to show me the way.
+
+Muuya: <b>Weary travellers</b>, they were. Their clothes shimmered like rain so beautifully...
+
+Sarvvis: It's useless for me to tell you to be more careful, isn't it.
+
+Muuya: Hehe, I think I'll be fine. But, right, I wanted to give them a welcoming gift to <b>refresh them</b>. Like that delicious drink you gave me last time I was <b>completely wiped</b>.
+
+Muuya: You know, that one made with a <b>feiry flower</b> and a <b>berry</b>, was it?
+
+Sarvvis: Hm, yes, I remember. Very well. Ah, but it seems I am a little low in stock. Let me go out and collect some ingredients first.
+
+
+	2
+Muuya: Lovely! I hope they'll like this, and this place, and that we can be great friends. 
+
+Sarvvis: And who and where were these people?
+
+Muuya: They were in the <b>Rangifer boreal forests</b> to the south. And you don't have to worry, Mister Sarvvis.
+
+Muuya: See, it was a lovely witch with her animal friends, and anyone who gets along with animals must be a wonderful person.
+
+Sarvvis: Alright then, I'll take your word for it. And bring them in sometime, I'm curious to meet them as well.
+
+Muuya: Alright, see you later!
+
+
+
+	3 //////////////////// REQUEST TWO
+
+Muuya: I've returned with friends, Mister Sarvvis. As you wished, Raspu and Itsa, the companions of the Mistress Yagi the Witch.
+
+Raspu: Greetings. So you are the fabled reindeer apothecary. It's a becoming appearance.
+
+Sarvvis: Thank you. And welcome. I hope your travels have treated you well.
+
+Raspu: Well, I'd like to say it has. We've heard you give aid any peoples and creatures, and we have a little request.
+
+Raspu: We didn't come from a friendly place, and our Mistress has been <b>restless as of late</b>, and her powers strangely unstable. And for that, we sincerely apologize for the snow storm we brought with us.
+
+Muuya: That's alright, we always expect a snow storm or two at this time of year.
+
+Raspu: Those are kind words, little Muuya. Apothecary, do you know of anything to give her a <b>bit of peace</b>?
+
+Muuya: I personally recommend the one that was <b>wonderfully sweet yet calming</b>. Remember, Mister Sarvvis?
+
+Sarvvis: Yes, I do. You're becoming quite bold, aren't you, Muuya. Wait right there, companions of the witch.
+
+
+	4 
+Sarvvis: Pour four tablespoons in some hot tea, once a day, after supper. Let me know how it fares.
+
+Raspu: Thank you kindly, Apothecary. We will repay you.
+
+Sarvvis: I can always be found if the need arises. Be well.
+
+
+
+	5 //////////////////// REQUEST THREE
+
+Sarvvis: Well, this is a rare visitor. What brings you here, spirit of fire and water?
+
+Spirit: I am Uuryn, and at the moment, but a lost soul. I have been sent by Topka the domovoi to seek your aid, reindeer healer.
+
+Sarvvis: Topka, is it, that little fellow from Muuya's home? Well, I am found by those who seek me. Tell me what it is you need.
+
+Uuryn: I was playing far from home with my family, when the recent snow storm swept me away to a <i>place of purple peat and murky waters</i>, a heavy domain of earth and water.
+
+Uuryn: I wandered back a ways, weary and tired, when Topka took me in until I had regained my strength... and has sent me here now.
+
+Uuryn: My home is a land of fire and flowing waters, but it seems the ,b>heavy cold peat has lingered its curses on me<b>. I miss my home so dearly...
+
+Sarvvis: Hmmm, I see, the <i>Siyohrang Pleregenmoore</i>, a bog that <b>drains all fortune</b> from the unprepared.
+
+Sarvvis: Perhaps you are in need of but a little replenishment of luck.
+
+
+	6
+Sarvvis: This will reverse the effects of the bog's poison. Wait a few days for your body to adjust, and you should be able to find your home easily.
+
+Uuryn: Thank you kindly, reindeer healer. Surely, your help will not go unrewarded.
+
+
+
+	7 //////////////////// REQUEST FOUR
+
+Topka: Oh Mister Sarvvis, what am I to do?!
+
+Sarvvis: Hello Topka. I hope your guest the other day found her way home.
+
+Topka: Oh, yes... I should be happy, yet why does my chest ache so much??? I think of Uuryn all day and all night, and I just want to see her again!
+
+Sarvvis: Hmmm, sounds like love sickness. There is no cure for that, little house helper. 
+
+Topka: Then what am I to do?... Aha, perhaps I shall visit her, and bring her a gift. Oh, but I am terribly unattractive...
+
+Topka: But maybe if I can please Uuryn? A <b>charm to make me seem terribly attrative</b>? Is there such a thing? Oh... I must see her... please Mister Sarvvis.
+
+Sarvvis: Oh little Topka, are you sure you will leave your hearth? It is not a light sacrifice.
+
+Topka: I am sure. I must go to Uuryn.
+
+Sarvvis: Hmm... Alright, seeing you are so resolved. I will give you something that will <b>enchant you briefly in the sweetest of charms</b>.
+
+
+	8
+Topka: Thank you reindeer healer! I must go to my lovely!
+
+Sarvvis: I don't think you really need it, Topka. I am sure you are charming as you already are.
+
+Topka: You are too kind, Mister Sarvvis. And for now, tata!
+
+
+
+	9 //////////////////// REQUEST FIVE
+
+Muuya: Hullo Mister Sarvvis. Topka is gone. To chase his love to the hot springs of the <i>Yellow Ranges</i>. I am happy for him... but now of all times...
+
+Sarvvis: Hello Muuya. Hot springs in the <i>Yellow Ranges</i>? That is new.
+
+Muuya: Yes, he told us as he left. But my parents' woodcarving is getting busy, and Topka was always a great help. 
+
+Muuya: And I've been visiting Miss Yagi so much lately... she's been telling me lots of stories lately, of her homeland to the east.
+
+Muuya: But anyways, I've brought my own little carving in hopes you could enchant it. Isn't there a spell to <b>bring this to life</b> for a bit? 
+
+Muuya: A little creature filled with the <b>lovely warmth</b> and <b>care</b> of the home. At least, until Topka returns.
+
+Sarvvis: Well, isn't that a wonderful carving of a domovoi. Perhaps it could be Topka's spiritual little brother. Hmm... I feel I do have a spell somewhere.
+
+	
+	10
+Sarvvis: Here we go... And, there! He should last for a time. Don't forget to feed him cookies and milk every night.
+
+Muuya: Oh, he's lovely! Mister Sarvvis, how are you so knowledgable about so many things? I'm sure my mum and dad will be happy.
+
+Sarvvis: Off you go then, little one. Give my regards to your parents for me.
+
+
+
+	11 //////////////////// REQUEST SIX
+
+Sarvvis: Why, greetings, friends. Raspu and, the Witch of the Woods. It is the first we have met.
+
+Yagi: Hello reindeer apothecary. I'm here to thank you for the help you and Muuya have given us. I haven't felt my head so clear and my body so refreshed in a long time.
+
+Raspu: Yes, you have our sincerect gratitude.
+
+Sarvvis: No need to be so formal. I am sure you haven't come just for thanks. What is troubling you?
+
+Yagi: You are perceptive. I am <b>plagued by nightmares</b>, yet wake in cold sweat without rememberence, left with only a nagging hole inside.
+
+Yagi: <b>Comfort eludes me</b>, and this strange forgetfulness...
+
+Raspu: You do not need to force yourself to remember, Mistress.
+
+Yagi: But there must be <b>something important hidden within my dreams</b>, for the self in the subconscious to smother so dutifully. Reindeer Sarvvis, can you help?
+
+Sarvvis: Dreams are always a tricky topic that upset the balance.
+
+
+	12
+Sarvvis: This will help your nightmares. Set it by your bed while you sleep, every night, until its colour becomes black. 
+
+Sarvvis: But by then, you should have found your dreams and waking already changed.
+
+Sarvvis: And if you so wish, this is the season for the most beautiful of the northern lights at <i>Tenger Gardinur</i>, where many go to seek peace.
+
+Yagi: The rumors were true, you are wonderful, reindeer healer. Thank you.
+
+
+
+	13 //////////////////// REQUEST SEVEN
+
+Muuya: Mister Sarvvis! I think I have a revelation. About how to help Miss Yagi. 
+
+Sarvvis: That is definitely something. Pray tell.
+
+Muuya: After the medicine you gave Miss Yagi, bits and pieces of her past are returning. She came from an eastern land of hot springs, you know? and her stories are so wonderfully warm and lovely.
+
+Muuya: But she's still strangely aching in her heart... And it occured to me she must be missing the hot springs dreadfully. Surely, soaking in them would cheer her up.
+
+Sarvvis: And that's where Topka has secretly run off to. I see where you're going.
+
+Muuya: Yes. I will go with Raspu to ask the hot spring spirits in the <i>Yellow Ranges</i> if they are willing, because it can be touchy between beings of power.
+
+Sarvvis: You are set to go? Do you take after Topka, or is it that Topka takes after the family?
+
+Sarvvis: Ha... At least let me give you a <b>charm of protection</b>. Please tell me you've also told your parents.
+
+Muuya: They don't mind so much. They say youth should experience the world, like they did. Hopefully, I can find Topka and Uuryn to ask for their help too.
+
+
+	14
+Sarvvis: Be safe out there, little one.
+
+Muuya: Thank you Mister Sarvvis! I will be back soon!
+
+
+
+	15 //////////////////// REQUEST EIGHT
+
+Uuryn: It is good we meet again, reindeer healer.
+
+Sarvvis: Hello, Uuryn. Muuya and Raspu must have found you then? And Topka?
+
+Uuryn: Ah, yes. Topka is lovely...*blush* and I have a debt to repay to you. We are also a clan of healers, and I am sure we can be of help.
+
+Uuryn: From what we hear of the Witch's past, even our special waters will not be quite enough. Her past is deeply <b>frozen</b> inside her <b>innermost depths</b>.
+
+Uuryn: We only need but a charm to our healing waters to flow deeper into her inner being.
+
+Sarvvis: "</b>That which is sleeping must be awoken..."</b>
+
+Sarvvis: Hmmm, I see. 
+
+
+	16
+
+Uuryn: Wonderful. Now this is a debt repaid, Sarvvis the reindeer healer.
+
+Uuryn: I had thought the storm was terrible, but it was surely a force of fortune. 
+
+Sarvvis: Thank you, Uuryn, and your peoples.
+
+
+
+	17 //////////////////// REQUEST NINE
+
+Muuya: I'm finally back, Mister Sarvvis. It is wonderful. See how Miss Yagi has become!
+
+Yagi: Hello reindeer healer. It must have been fate that brought me to this peoples here. My former self has been restored.
+
+Sarvvis: Well now. Who would have known. I am glad that I could be of help.
+
+Yagi: I remember, now, what duties I have as a Witch of the Winds and Woods. I will stay here to protect from the evil and dirt of the world, as I had done in my homelands.
+
+Yagi: And the kindly hot springs peoples will let me bathe when ever I so wish, so I will not clog with ice again.
+
+Yagi: These lovely people that have welcomed and helped me will be cherished.
+
+Muuya: I'm so happy you'll stay, Miss Yagi. You must tell me more stories, too. I was right that we would be good friends.
+
+Sarvvis: That is a wonderful end to another beginning. I will always be here when need calls.

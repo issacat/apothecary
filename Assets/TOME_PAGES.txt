@@ -1,0 +1,107 @@
+
+
+PLACES
+
+Tarandus Highland Taiga
+	{ethereal bilberry, torched perunika}
+	The snow-covered forests of mystery and frequent storms, where things are not as they seem and <b>lightning visits in romance</b>. Yet, all is <b>quiet</b>, and one becomes one with the world.
+
+
+Yashil Boreal Forest
+	{dwarf bilberry, blooming fern}
+	Secrets are hidden within the forest's depths, things <b>sweet</b> and <b>fortitious</b>. Yet, care must be made with what is taken from its domain. You are never sure of what you see.
+
+
+Siyohrang Planregenmoore (Coastal Bog)
+	{bog billberry, violet perunika}
+	The water runs brown and thick, and its soil is of a deep red-purple hue. The plants of this coastal bog take the colour of the soil, and are both <b>hauntingly beautiful</b> yet <b>dangerously poisonous</b>.
+
+
+The Yellow Ranges
+	{tormented fern, midnight fern}
+	The mountains glow yellow in the evening and morning light - a strange and beautiful view. At the foot, <b>plants do not bloom</b>, but remain in frustrated silence. In the night, <b>lights can be seen twinkling</b>, but where they come from... it isn't known.
+
+
+Tenger Gardinur
+	{divine perunika, midnight fern}
+	On the vast ice flats of this cold desert, the curtains of heaven dance every night. It is a <b>sacred place</b> where one travels between worlds, and the <b>night is lit</b>. One often travels here for a <b>sanctified solitude</b>.
+
+
+
+
+//////////////////////////////////////////////////
+
+INGREDIENTS
+
+
+Billberry
+
+Bog Billberry
+	Found only in the <i>Siyohrang Planregenmoore</i>, it has been dyed purple with <b>poison</b>. Yet, a good measure has <b>balancing effects</b> with other ingredients.
+
+Ethereal Billberry
+	Those who eat of this berry are overcome by a state of <b>serenity</b> and otherworldly one-ness with the world. They are found growing next to torched perunika in seeming <b>calm</b> and disregard.
+
+Dwarf Billberry
+	Little <b>juicy sweet</b> berries of all things good and wonderful. They have <b>lovely scent</b> that entices all residents of the <i>boreal</i>.
+
+
+Perunika
+
+Torched Perunika
+	They are said to be born from lightning in the storm-ridden <i>Tarandus Highland Taiga</i>. Their petals <b>promote warmth</b>, and is often used in internal healing.
+
+Violet Perunika
+	A strain with small petals of deep purple in the <i>Siyohrang Planregenmoore</i>. Their unlikely beauty amidst poison have driven people to relate it with <b>love</b> that wins over all obstacles.
+
+Divine Perunika
+	It glows with a <b>saintly blue</b> like the lights of the Tenger Gardinur, and is the flower of the goddess of <b>virtue</b>.
+
+
+Fern
+
+Tormented Fern
+	Stunted in growth and never known to unfurl, its nature <b>reverses</b> properties like the clenched fist of <b>opposition</b>.
+
+Blooming Fern
+	An undying symbol of <b>good fortune</b> and <b>luck</b>, yet it should be plucked with care. Who knows what too much fortune can bring?
+
+Midnight Fern
+	They grow in the <b>isolated</b> shadowed cliffs of the <i>Yellow Ranges</i>, and draw in the holder to <b>introspection</b> and the desire for <b>solitude</b>.
+
+
+
+
+//////////////////////////////////////////////////
+
+POTIONS
+
+
+
+
+
+//////////////////////////////////////////////////
+
+PEOPLE
+
+Muuya
+	A young inquisitive girl. Her ears are sensitive to the murmurings of creatures and plants, and has an uncanny sensitivity to the realm of the supernatural. Her favourite thing is watching the northern lights, where she hears a chorus of ancient and otherworldly voices.
+
+Yagi, Witch of the Woods (before)
+	A powerful witch known to bring storms wherever she travels. Little is known about her, except that she has companions who flourish in the clouds and rain.
+
+Yagi, Witch of the Winds and Woods (after)
+	Her homeland was valley of hot springs to the east, where she protected the inhabitants in her domain. Yet, chased out after times of superstition, she has travelled far unable to warm her bones. But fate brought her to the taiga, where she has been refreshed.
+
+Raspu, the Cloud Dog
+	The brother of Itsa, his fur is silvery, soft and flows like the clouds. He was born from a mighty storm and thunder and lightning, and grows dark and grey when in heated passion.
+
+Itsa, the Rain Cat
+	The sister of Raspu, she brings rain when she dances and jumps. Born from a mighty storm and strong winds and strong rain, she turns silvery and dark-grey when the water of the heavens fall.
+
+Topka, the domovoi
+	An excitable little domovoi that protects the hearth of his masters' home. He is very capable but is oft to wandering about in search for surprises.
+
+Uuryn, a hot-spring spirit
+	These spirits are known to be secretive, and gaurd their springs fiercely. Uuryn, after being swept away in a snow storm, left the domain of her homeland and met Topka and Muuya.
+
