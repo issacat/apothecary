@@ -35,6 +35,11 @@ public class WorldScript : MonoBehaviour {
 
     void Awake()
     {
+        
+    }
+
+	// Use this for initialization
+	void Start () {
         _mainMenuMode = GameObject.FindGameObjectWithTag("mainMenuMode");
         _scavengeMode = GameObject.FindGameObjectWithTag("scavengeMode");
         _player = GameObject.FindGameObjectWithTag("Player");
@@ -57,10 +62,7 @@ public class WorldScript : MonoBehaviour {
 
         music = GameObject.Find("Music").GetComponent<AudioSource>();
         door = GameObject.Find("doorSound").GetComponent<AudioSource>();
-    }
 
-	// Use this for initialization
-	void Start () {
         menuState = MenuState.mainMenu;
         music.Play();
         newGame = true;

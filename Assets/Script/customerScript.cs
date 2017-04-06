@@ -188,35 +188,34 @@ public class customerScript : MonoBehaviour
                 }
                 if (charaState <= 3)
                 {
-                    stars[charaState - 1].SetActive(true);
-                    stars[charaState - 1].GetComponent<Animator>().SetInteger("gratitude", requestReward+2);
+                    
+                    stars[charaState - (1+charaState/2)].SetActive(true);
+                    stars[charaState - (1 + charaState / 2)].GetComponent<Animator>().SetInteger("gratitude", requestReward + 2);
                 }
                 else
                 {
-                    stars[charaState - 1].SetActive(true);
-                    stars[charaState - 1].GetComponent<Animator>().SetInteger("gratitude", requestReward);
+                    stars[charaState - (1 + charaState / 2)].SetActive(true);
+                    stars[charaState - (1 + charaState / 2)].GetComponent<Animator>().SetInteger("gratitude", requestReward);
                 }
                 charaState++;
                 setChara();
-                player.gratitude+= requestReward;
+                player.gratitude += requestReward;
                 success.Play();
 
             }
-            else if (requestSpecial != null)
+            else if (requestSpecial != null && itemCheck.name.Contains(requestSpecial.ingredientName))
             {
-                if (itemCheck.name.Contains(requestSpecial.ingredientName))
-                {
-                    Destroy(requestSlot.transform.GetChild(0).gameObject);
-                    requestReward = 5;
-                    stars[charaState - 1].SetActive(true);
-                    stars[charaState - 1].GetComponent<Animator>().SetInteger("gratitude", requestReward);
-                    charaState++;
-                    setChara();
-                    player.gratitude+=requestReward;
-                    success.Play();
-                }
+                Destroy(requestSlot.transform.GetChild(0).gameObject);
+                requestReward = 5;
+                stars[charaState - 1].SetActive(true);
+                stars[charaState - 1].GetComponent<Animator>().SetInteger("gratitude", requestReward);
+                charaState++;
+                setChara();
+                player.gratitude += requestReward;
+                success.Play();
             }
         }
+        
     }
 
 
@@ -261,7 +260,7 @@ public class customerScript : MonoBehaviour
             dia.Add("Sarvvis: It's useless for me to tell you to be more careful, isn't it.");
             dia.Add("Muuya: Hehe, I think I'll be fine. But, right, I wanted to give them a welcoming gift to <b>refresh them</b>. Like that delicious drink you gave me last time I was <b>completely wiped</b>.");
             dia.Add("Muuya: You know, that one made with a <b>fiery flower</b> and a <b>berry</b>, was it?");
-            dia.Add("Sarvvis: Hm, yes, I remember. Very well.");
+            dia.Add("Sarvvis: Hm, yes, I remember. Very well. Ah, but it seems I am a little low in stock. Let me <i>go out and collect some ingredients</i> first.");
             request = list.potions["Potion of Healing"];
             requestAtt = "Soothing";
             chara1.SetActive(true);
@@ -275,7 +274,6 @@ public class customerScript : MonoBehaviour
             dia.Add("Sarvvis: And who and where were these people?");
             dia.Add("Muuya: They were in the <b>Rangifer boreal forests</b> to the south. And you don't have to worry, Mister Sarvvis.");
             dia.Add("Muuya: See, it was a lovely witch with her animal friends, and anyone who gets along with animals must be a wonderful person.");
-            dia.Add("Sarvvis: Hm, yes, I remember. Very well. Ah, but it seems I am a little low in stock. Let me go out and collect some ingredients first.");
             dia.Add("Muuya: Alright, see you later!");
         }
         else if (charaState == 3) //second request start
@@ -312,9 +310,9 @@ public class customerScript : MonoBehaviour
             dia.Add("Spirit: I am Uuryn, and at the moment, but a lost soul. I have been sent by Topka the domovoi to seek your aid, reindeer healer.");
             dia.Add("Sarvvis: Topka, is it, that little fellow from Muuya's home? Well, I am found by those who seek me. Tell me what it is you need.");
             dia.Add("Uuryn: I was playing far from home with my family, when the recent snow storm swept me away to a <i>place of purple peat and murky waters</i>,");
-            dia.Add("...a heavy domain of earth and water.");
+            dia.Add("Uuryn:...a heavy domain of earth and water.");
             dia.Add("Uuryn: I wandered back a ways, weary and tired, when Topka took me in until I had regained my strength... and has sent me here now.");
-            dia.Add("Uuryn: My home is a land of fire and flowing waters, but it seems the <b>heavy cold peat has lingered its curses on me<b>. I miss my home so dearly...");
+            dia.Add("Uuryn: My home is a land of fire and flowing waters, but it seems the <b>heavy cold peat has lingered its curses on me</b>. I miss my home so dearly...");
             dia.Add("Sarvvis: Hmmm, I see, the <i>Siyohrang Pleregenmoore</i>, a bog that <b>drains all fortune</b> from the unprepared.");
             dia.Add("Sarvvis: Perhaps you are in need of but a little replenishment of luck.");
             request = list.potions["Brew of Blessing"];
@@ -337,13 +335,13 @@ public class customerScript : MonoBehaviour
             dia.Add("Topka: Oh Mister Sarvvis, what am I to do?!");
             dia.Add("Sarvvis: Hello Topka. I hope your guest the other day found her way home.");
             dia.Add("Topka: Oh, yes... I should be happy, yet why does my chest ache so much??? I think of Uuryn all day and all night, and I just want to see her again!");
-            dia.Add("Sarvvis: Hmmm, sounds like love sickness. There is no cure for that, little house helper. ");
+            dia.Add("Sarvvis: Hmmm, sounds like love sickness. Perhaps you need to <b>balance your emotions</b>, little house helper. ");
             dia.Add("Topka: Then what am I to do?... Aha, perhaps I shall visit her, and bring her a gift. Oh, but I am terribly unattractive...");
-            dia.Add("Topka: But maybe if I can please Uuryn? A <b>charm to make me seem terribly attrative</b>?");
-            dia.Add("Is there such a thing? Oh... I must see her... please Mister Sarvvis.");
+            dia.Add("Topka: But maybe if I can please Uuryn? A <b>charm to make me seem devastatingly attractive</b>?");
+            dia.Add("Topka: Is there such a thing? Oh... I must see her... please Mister Sarvvis.");
             dia.Add("Sarvvis: Oh little Topka, are you sure you will leave your hearth? It is not a light sacrifice.");
             dia.Add("Topka: I am sure. I must go to Uuryn.");
-            dia.Add("Sarvvis: Hmm... Alright, seeing you are so resolved. I will give you something that will <b>enchant you briefly in the sweetest of charms</b>.");
+            dia.Add("Sarvvis: Hmm... Alright, seeing you are so resolved. I will give you something that will <b>enchant you briefly with charms</b>.");
             request = list.potions["Perfume of Allure"];
             requestAtt = "seduction";
             requestSpecial = list.potions["Eternal Love"];
@@ -368,7 +366,7 @@ public class customerScript : MonoBehaviour
             dia.Add("Muuya: Yes, he told us as he left. But my parents' woodcarving is getting busy, and Topka was always a great help. ");
             dia.Add("Muuya: And I've been visiting Miss Yagi so much lately... she's been telling me lots of stories lately, of her homeland to the east.");
             dia.Add("Muuya: But anyways, I've brought my own little carving in hopes you could enchant it. Isn't there a spell to <b>bring this to life</b> for a bit?");
-            dia.Add("Muuya: A little creature filled with the <b>lovely warmth</b> and <b>care</b> of the home. At least, until Topka returns.");
+            dia.Add("Muuya: A little creature filled with the <b>sweetness</b> and <b>care</b> of the home. At least, until Topka returns.");
             dia.Add("Sarvvis: Well, isn't that a wonderful carving of a domovoi. Perhaps it could be Topka's spiritual little brother. Hmm... I feel I do have a spell somewhere.");
             request = list.potions["Animalcule"];
             requestAtt = "Companionship";
@@ -391,7 +389,7 @@ public class customerScript : MonoBehaviour
             dia.Add("Yagi: Hello reindeer apothecary. I'm here to thank you for the help you and Muuya have given us. I haven't felt my head so clear and my body so refreshed in a long time.");
             dia.Add("Raspu: Yes, you have our sincerect gratitude.");
             dia.Add("Sarvvis: No need to be so formal. I am sure you haven't come just for thanks. What is troubling you?");
-            dia.Add("Yagi: You are perceptive. I am <b>plagued by nightmares</b>, yet wake in cold sweat without rememberence, left with only a nagging hole inside.");
+            dia.Add("Yagi: You are perceptive. I am plagued by nightmares, yet <b>wake in cold sweat</b> without rememberence, left with only a nagging hole inside.");
             dia.Add("Yagi: <b>Comfort eludes me</b>, and this strange forgetfulness...");
             dia.Add("Raspu: You do not need to force yourself to remember, Mistress.");
             dia.Add("Yagi: But there must be <b>something important hidden within my dreams</b>, for the self in the subconscious to smother so dutifully. Reindeer Sarvvis, can you help?");
@@ -422,13 +420,13 @@ public class customerScript : MonoBehaviour
             dia.Add("Muuya: Mister Sarvvis! I think I have a revelation. About how to help Miss Yagi.");
             dia.Add("Sarvvis: That is definitely something. Pray tell.");
             dia.Add("Muuya: After the medicine you gave Miss Yagi, bits and pieces of her past are returning.");
-            dia.Add("She came from an eastern land of hot springs, you know? and her stories are so wonderfully warm and lovely.");
+            dia.Add("Muuya: She came from an eastern land of hot springs, you know? and her stories are so wonderfully warm and lovely.");
             dia.Add("Muuya: But she's still strangely aching in her heart... And it occured to me she must be missing the hot springs dreadfully. Surely, soaking in them would cheer her up.");
             dia.Add("Sarvvis: And that's where Topka has secretly run off to. I see where you're going.");
             dia.Add("Muuya: Yes. I will go with Raspu to ask the hot spring spirits in the <i>Yellow Ranges</i> if they are willing, because it can be touchy between beings of power.");
             dia.Add("Sarvvis: You are set to go? Do you take after Topka, or is it that Topka takes after the family?");
-            dia.Add("Sarvvis: Ha... At least let me give you a <b>charm of protection</b>. Please tell me you've also told your parents.");
-            dia.Add("Muuya: They don't mind so much. They say youth should experience the world, like they did. Hopefully, I can find Topka and Uuryn to ask for their help too.");
+            dia.Add("Sarvvis: Ha... At least let me give you a <b>charm to keep you safe</b>. Please tell me you've also told your parents.");
+            dia.Add("Muuya: They don't mind so much. They say youth should experience the world, like they did. <b>May luck be on my side.</b>");
             request = list.potions["Potion of Protection"];
             requestAtt = "blessing";
             requestSpecial = list.potions["Goddess' Protection"];
@@ -452,7 +450,7 @@ public class customerScript : MonoBehaviour
             dia.Add("Uuryn: Ah, yes. Topka is lovely...*blush* and I have a debt to repay to you. We are also a clan of healers, and I am sure we can be of help.");
             dia.Add("Uuryn: From what we hear of the Witch's past, even our special waters will not be quite enough. Her past is deeply <b>frozen</b> inside her <b>innermost depths</b>.");
             dia.Add("Uuryn: We only need but a charm to our healing waters to flow deeper into her inner being.");
-            dia.Add("Sarvvis: \"</b>That which is sleeping must be awoken...\"</b>");
+            dia.Add("Sarvvis: <b>That which is sleeping must be awoken...</b>");
             dia.Add("Sarvvis: Hmmm, I see. ");
             request = list.potions["Silver Water"];
             requestAtt = "awakening";
@@ -480,6 +478,7 @@ public class customerScript : MonoBehaviour
             dia.Add("Sarvvis: That is a wonderful end to another beginning. I will always be here when need calls.");
             endButton.SetActive(true);
             chara7.SetActive(true);
+            chara1.SetActive(true);
             StartCoroutine(FadeImage(true));
             StartCoroutine(FadeImage(false));
             chara4.SetActive(false);

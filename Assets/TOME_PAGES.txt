@@ -76,6 +76,14 @@ Midnight Fern
 
 POTIONS
 
+Brew of Blessing {blessing, fortune, rejuvenation}
+
+
+Animalcule
+	Born from the <b>sweetness</b> and </b>precious care</b> of the heart, they offer <b>companionship</b> from their bottle to ward away lonely days and nights.
+
+Brownie Butler
+	When an animalcule has been cared for with lots and lots of <b>warmth</b>, they may evolve into a brownie out of love for their master, to ever <b>help</b> them.
 
 
 

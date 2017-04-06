@@ -156,15 +156,12 @@ public class bookScript : MonoBehaviour {
 
         _currentPage = GameObject.FindGameObjectWithTag("recipePage");
         currMaxPageNum = _currentPage.transform.childCount-1;
-        for (int i = 0; i < currMaxPageNum - 1; i++)
+        for (int i = 0; i <= currMaxPageNum; i++)
         {
             _currentPage.transform.GetChild(i).gameObject.SetActive(false);
         }
         
-        if(_customer.charaState == 1)
-        {
-            pageNum = 0;
-        }else pageNum = 1;
+         pageNum = 0;
 
         _currentPage.transform.GetChild(pageNum).gameObject.SetActive(true);
         if (pageNum + 1 <= currMaxPageNum) _currentPage.transform.GetChild(pageNum + 1).gameObject.SetActive(true);

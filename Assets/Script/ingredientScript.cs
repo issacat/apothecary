@@ -129,7 +129,7 @@ public class ingredientScript : MonoBehaviour {
                 potionAttribute test = a.AddComponent<potionAttribute>();
                 a.GetComponent<UnityEngine.UI.Image>().sprite = potions["Potion of Healing"].img;
                 a.name = potions["Potion of Healing"].ingredientName;
-                test.setAttribute("Rejuvenate");
+                test.setAttribute("Rejuvenation");
                 a.transform.SetParent(panel.transform, false);
 
                 Transform panel2 = playerInventory[j + 1].transform;
@@ -150,6 +150,23 @@ public class ingredientScript : MonoBehaviour {
                 c.name = test3.ingredientName;
                 c.transform.SetParent(panel3.transform, false);
 
+                Transform panel4 = playerInventory[j+3].transform;
+
+                GameObject d = Instantiate(defaultPotion);
+                potionAttribute test4 = d.AddComponent<potionAttribute>();
+                d.GetComponent<UnityEngine.UI.Image>().sprite = potions["Decoction of Clarity"].img;
+                d.name = potions["Decoction of Clarity"].ingredientName;
+                test4.setAttribute("Awakening");
+                d.transform.SetParent(panel4.transform, false);
+
+                Transform panel5 = playerInventory[j + 4].transform;
+
+                GameObject e = Instantiate(defaultPotion);
+                potionAttribute test5 = e.AddComponent<potionAttribute>();
+                e.GetComponent<UnityEngine.UI.Image>().sprite = potions["Brew of Blessing"].img;
+                e.name = potions["Brew of Blessing"].ingredientName;
+                test5.setAttribute("Awakening");
+                e.transform.SetParent(panel5.transform, false);
                 break;
             }
         }
@@ -189,7 +206,7 @@ public class ingredientScript : MonoBehaviour {
         */
         pot1 = new potionAttribute("Brew of Blessing", "Blessing, Fortune, Rejuvenation", "A brew made of the <b>fortitious flowering fern</b>, it entices the lady of fortune to smile kindly on whoever drinks it", Resources.Load<Sprite>("brew_of_blessing"));
         pot2 = new potionAttribute("Potion of Healing", "Soothing, Rejuvenation", "For the wounds that can be healed with the <b>warmth</b> of the hearth and heart. Can help calm a restless mind, and a little <b>love</b> makes a more soothing concoction.", Resources.Load<Sprite>("potion_of_healing"));
-        pot3 = new potionAttribute("Animalcule", "Companionship, Soothing", "Microscopic creatures enter the bloodstream for a short time, often administered in a liquid solution. First discovered in the Caves of Porewit decades ago, these creatures have been increasingly used for medicinal purposes.", Resources.Load<Sprite>("animalcule"));
+        pot3 = new potionAttribute("Animalcule", "Companionship, Soothing", "Born from the <b>sweetness</b> and <b>precious care</b> of the heart, they offer <b>companionship</b> from their bottle to ward away lonely days and nights.", Resources.Load<Sprite>("animalcule"));
         pot4 = new potionAttribute("Elixir of Dreams", "Dreams, Passion", "Once taken, the <b>fire of the heart</b> will be ignited and the lock undone on the wellspring of <b>desires</b>. The effects may vary person to person.", Resources.Load<Sprite>("elixir_of_dreams"));
         pot5 = new potionAttribute("Perfume of Allure", "Seduction, Dreams, Passion", "A fresh smelling spritzer that is known to make the wearer more <b>intriguing</b>.", Resources.Load<Sprite>("perfume_of_allure"));
         pot6 = new potionAttribute("Potion of Protection", "Immunity, Blessing", "A bitter, fizzy potion often used by military and those <b>seeking the protection</b> of the Gods.", Resources.Load<Sprite>("potion_of_protection"));
@@ -199,24 +216,16 @@ public class ingredientScript : MonoBehaviour {
         SPECIAL POTIONS 
         POT + ING
         */
-        spot1 = new potionAttribute("Balm of Realization", "Awakening", "A salve that, when rubbed on the eyelid, will allow the user to see that which was hidden. It is said to reveal the true intentions of others and at times lead to the invention of mythical objects. It is used by powerful witches to capture spirits.",
-            Resources.Load<Sprite>("balm_realization"));
-        spot2 = new potionAttribute("Nightmare Crystal", "Nightmare", "The crystal, when placed in the north west corner of the bed, will capture bad spirits and prevent nightmares. Some say that Marowit dwells within the crystal and feasts upon the nightmares.",
-            Resources.Load<Sprite>("nightmare_crystal"));
-        spot3 = new potionAttribute("Midnight Moonlight", "Night", "A spirit that has been soaked in moonlight for 30 moons, purified in the 1000 year old well water, and sprinkled with aged berries. It is said to be blessed by the fairies of the night.",
-            Resources.Load<Sprite>("midnight_moonlight"));
-        spot4 = new potionAttribute("Goddess' Protection", "Protection", "This potion calls upon the ranger goddess Dziewona to protect the imbiber. Often consumed by hunters before a dangerous expedition into the Black Forest.",
-            Resources.Load<Sprite>("goddess_protection"));
-        spot5 = new potionAttribute("Brownie Butler", "Helper", "A loyal household fairy that takes care of the chores during the early hours of the morning. They often have tails and small horns, resembling the animal that is closest to the house's soul. ",
-            Resources.Load<Sprite>("brownie_butler"));
-        spot6 = new potionAttribute("Eternal Love", "Love", "The quintessential love potion, used to create pure obsession (not actual love) in whoever ingests it. Well known to cause a lot of problems once it's effects wear off.",
-            Resources.Load<Sprite>("eternal_love"));
-        spot7 = new potionAttribute("Homunculus", "Soul", "A protective spirit that replicates the creator's soul and will sacrifice itself when the creator is in mortal danger.",
-            Resources.Load<Sprite>("homunculus"));
-        spot8 = new potionAttribute("Dream Catcher", "Dreams", "A viscous concoction that is primarily used by insomniacs to maintain a steady sleep pattern. Can be incorporated into a sleep schedule to maintain regular dreaming.",
-            Resources.Load<Sprite>("dream_catcher"));
-        spot9 = new potionAttribute("Steaming Elixir", "Awakening", "A powerful, hot brew. It's contents will shock the tongue of the consumer, waking them from even the deepest of sleeps.",
-            Resources.Load<Sprite>("steaming_elixir"));
+        spot1 = new potionAttribute("Balm of Realization", "Awakening", "A salve that, when rubbed on the eyelid, will allow the user to see that which was hidden. It is made with <b>clarity</b> under <b>deep calm</b>.", Resources.Load<Sprite>("balm_of_realization"));
+        spot2 = new potionAttribute("Nightmare Crystal", "Nightmare", "The crystal, when placed in the north west corner of the bed, will capture bad spirits and prevent nightmares. Some say that Marowit dwells within the crystal and feasts upon them.", Resources.Load<Sprite>("nightmare_crystal"));
+        spot3 = new potionAttribute("Midnight Moonlight", "Night", "A spirit that has been soaked in moonlight for 30 moons, purified in the 1000 year old well water, and sprinkled with aged berries.", Resources.Load<Sprite>("moonlight_midnight"));
+        spot4 = new potionAttribute("Goddess' Protection", "Protection", "A <b>sanctified protection charm</b>. Often consumed by hunters before a dangerous expedition into the Siyohrang Planregenmoore.", Resources.Load<Sprite>("goddess_protection"));
+        spot5 = new potionAttribute("Brownie Butler", "Helper", "When an animalcule has been cared for with lots and lots of <b>warmth</b>, they may evolve into a brownie out of love for their master, to ever <b>help</b> them. ", Resources.Load<Sprite>("brownie_butler"));
+        spot6 = new potionAttribute("Eternal Love", "Love", "The quintessential love potion, used to create pure obsession (not actual love) in whoever ingests it. Well known to cause a lot of problems once it's effects wear off.", Resources.Load<Sprite>("eternal_love"));
+        spot7 = new potionAttribute("Homunculus", "Soul", "A protective spirit born from an <b>animalcule</b> sensing the deep loneliness of its master, will replicate the creator's soul, sacrifice itself when the creator is in mortal danger.", Resources.Load<Sprite>("homunculus"));
+        spot8 = new potionAttribute("Dream Catcher", "Dreams", "A viscous concoction that is primarily used by insomniacs to maintain a steady sleep pattern. Can be incorporated into a sleep schedule to maintain regular dreaming.", Resources.Load<Sprite>("dream_catcher"));
+        spot9 = new potionAttribute("Steaming Elixir", "Awakening", "A powerful, hot brew. It's contents will shock the tongue of the consumer, waking them from even the deepest of sleeps.", Resources.Load<Sprite>("steaming_elixir"));
+
         potions = new Dictionary<string, potionAttribute>()
         {
             {"Brew of Blessing", pot1},
@@ -414,7 +423,7 @@ public class ingredientScript : MonoBehaviour {
                 a.name = potions[s].ingredientName;
                 test.setAttribute(att);
                 a.transform.SetParent(panel.transform, false);
-                player.modalPopUp(a.name, test.attribute, a.GetComponent<UnityEngine.UI.Image>().sprite);
+                player.modalPopUp(potions[s].ingredientName, test.attribute, a.GetComponent<UnityEngine.UI.Image>().sprite);
                 for (int h = 0; h < m_slots.Length; h++)
                 {
                     if (m_slots[h] != null)
@@ -445,7 +454,7 @@ public class ingredientScript : MonoBehaviour {
 
     public void addIngredients(int i)
     {
-        for (int j = 0; j <= playerInventory.Length - 2; j++)
+        for (int j = 0; j <= playerInventory.Length - 1; j++)
         {
             if (playerInventory[j].gameObject.transform.childCount == 0 && i == 1)
             {

@@ -17,12 +17,13 @@ public class storyScript : MonoBehaviour {
 
     void Awake()
     {
-        _storeMode = GameObject.FindGameObjectWithTag("storeFront");
-        _preparationMode = GameObject.FindGameObjectWithTag("prepArea");
+        
     }
 
     // Use this for initialization
     void Start () {
+        _storeMode = GameObject.FindGameObjectWithTag("storeFront");
+        _preparationMode = GameObject.FindGameObjectWithTag("prepArea");
         screen = PresentScreen.storeMode;
     }
 	
